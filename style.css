@@ -2,6 +2,8 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
+  height: 100vh;
+  overflow: hidden;
 }
 
 header {
@@ -12,21 +14,50 @@ header {
   padding: 0 19px;
 }
 
+main {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 #menu-icon {
   position: absolute;
   top: 19px;
 }
 
-#timeline {
+#headline {
+  min-height: 570px;
   display: flex;
   flex-direction: column;
   padding: 0 19px;
+  background: #fff url(./assets/image_geometry_2.png) center bottom no-repeat;
+  background-clip: border-box;
+  background-origin: border-box;
 }
 
-#timeline > h1 {
+#headline > h1 {
   font-family: "Playfair Display", serif;
   font-size: 50px;
   line-height: 50px;
   font-weight: normal;
   font-style: normal;
+}
+
+#headline > p {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+#headline > button {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  display: block;
+  height: 50px;
+  background: #1a2236;
+  font-weight: 500;
+  font-size: 16px;
 }
