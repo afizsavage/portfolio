@@ -6,8 +6,13 @@ body {
 
 header {
   display: flex;
-  align-items: center;
   justify-content: end;
   height: 74px;
-  background: #fff url(./assets/image_geometry_1.png) 0px 0px no-repeat;
+  background: #fff url(./assets/image_geometry_1.png) no-repeat;
+  padding: 0 19px;
+}
+
+header #menu-icon {
+  position: absolute;
+  top: 19px;
 }
