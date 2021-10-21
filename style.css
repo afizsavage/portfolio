@@ -35,15 +35,15 @@ main {
   color: #1a2236;
 }
 
-#headline > h1 {
+.headings {
   font-family: "Playfair Display", serif;
   font-size: 50px;
   line-height: 100%;
   font-weight: 400;
   font-style: normal;
   width: 220px;
-  height: 100px;
-  margin-bottom: 0;
+  height: auto;
+  margin-bottom: 5%;
 }
 
 #headline > p {
@@ -54,6 +54,22 @@ main {
   line-height: 21px;
   letter-spacing: -0.01em;
   margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.card button {
+  border: 1px solid #fff;
+  width: 178px;
+  height: 44px;
+  background: #1a2236 url(./assets/Union.png) right center no-repeat;
+  background-clip: content-box;
+  background-origin: content-box;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  text-align: left;
+  padding: 0 10px;
 }
 
 #headline > button {
@@ -65,4 +81,56 @@ main {
   font-weight: 500;
   font-size: 16px;
   border: none;
+}
+
+#projects {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 320px;
+  justify-content: center;
+}
+
+#projects > h2 {
+  margin-bottom: 7%;
+}
+
+.card {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 19px 0;
+}
+
+.card > section {
+  background: #1a2236;
+  border: 0.333333px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  padding: 19px;
+}
+
+.card > section h3 {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 80%;
+  color: #fff;
+  margin: 0;
+}
+
+.card ul > li {
+  display: inline;
+  background: #98dede;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 80%;
+  color: #1a2236;
+  padding: 5px 10px;
+  margin-right: 5px;
 }
