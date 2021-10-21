@@ -21,7 +21,7 @@ header {
 }
 
 main {
-  height: 100%;
+  height: auto;
 }
 
 #headline {
@@ -46,7 +46,7 @@ main {
   margin-bottom: 5%;
 }
 
-#headline > p {
+main > section > p {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -58,6 +58,7 @@ main {
 }
 
 .card button {
+  font-family: "Poppins", sans-serif;
   border: 1px solid #fff;
   width: 178px;
   height: 44px;
@@ -72,7 +73,7 @@ main {
   padding: 0 10px;
 }
 
-#headline > button {
+.primary {
   font-family: "Poppins", sans-serif;
   color: #fff;
   display: block;
@@ -83,7 +84,9 @@ main {
   border: none;
 }
 
-#projects {
+#projects,
+#about-me {
+  font-family: "Poppins", sans-serif;
   height: 100%;
   display: grid;
   grid-template-columns: 320px;
