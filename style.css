@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-size: 16px;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 header {
@@ -22,8 +22,6 @@ header {
 
 main {
   height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 #headline {
