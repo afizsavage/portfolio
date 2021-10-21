@@ -14,15 +14,16 @@ header {
   padding: 0 19px;
 }
 
+#menu-icon {
+  position: absolute;
+  top: 19px;
+  right: 19px;
+}
+
 main {
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
-}
-
-#menu-icon {
-  position: absolute;
-  top: 19px;
 }
 
 #headline {
