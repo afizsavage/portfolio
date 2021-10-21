@@ -1,0 +1,70 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: end;
+  height: 74px;
+  background: #fff url(./assets/image_geometry_1.png) no-repeat;
+  padding: 0 19px;
+}
+
+#menu-icon {
+  position: absolute;
+  top: 19px;
+  right: 19px;
+}
+
+main {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#headline {
+  min-height: 566px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 19px;
+  background: #fff url(./assets/image_geometry_2.png) center bottom no-repeat;
+  background-clip: border-box;
+  background-origin: border-box;
+  color: #1a2236;
+}
+
+#headline > h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 50px;
+  line-height: 100%;
+  font-weight: 400;
+  font-style: normal;
+  width: 220px;
+  height: 100px;
+  margin-bottom: 0;
+}
+
+#headline > p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.01em;
+  margin-bottom: 40px;
+}
+
+#headline > button {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  display: block;
+  height: 50px;
+  background: #1a2236;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+}
