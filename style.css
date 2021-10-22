@@ -172,6 +172,14 @@ main > section > p {
   margin: 0;
 }
 
+.card figure {
+  margin: 0;
+}
+
+.card img {
+  display: block;
+}
+
 #about-me > button {
   background: #1a2236 url(./assets/ic_download.svg) right center no-repeat;
   background-origin: content-box;
