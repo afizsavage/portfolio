@@ -57,12 +57,28 @@ main > section > p {
   margin-top: 0;
 }
 
+.primary-dark {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  display: block;
+  height: 50px;
+  background: #1a2236;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+}
+
+.primary-dark:hover {
+  border: 1px solid #1a2236;
+  color: #1a2236;
+  background: #fff;
+}
+
 .card button {
   font-family: "Poppins", sans-serif;
-  border: 1px solid #fff;
   width: 178px;
   height: 44px;
-  background: #1a2236 url(./assets/Union.png) right center no-repeat;
+  background: #1a2236 url(./assets/ic_arrow_right.svg) right center no-repeat;
   background-clip: content-box;
   background-origin: content-box;
   font-weight: 500;
@@ -73,14 +89,20 @@ main > section > p {
   padding: 0 10px;
 }
 
-.primary {
-  font-family: "Poppins", sans-serif;
+.card button:hover {
+  background: #fff url(./assets/ic_arrow_right_dark.svg) right center no-repeat;
+  background-origin: content-box;
+}
+
+.secondary-dark {
   color: #fff;
-  display: block;
-  height: 50px;
   background: #1a2236;
-  font-weight: 500;
-  font-size: 16px;
+  border: 1px solid #fff;
+}
+
+.secondary-dark:hover {
+  color: #1a2236;
+  background: #fff;
   border: none;
 }
 
@@ -152,6 +174,14 @@ main > section > p {
 
 #about-me > button {
   background: #1a2236 url(./assets/ic_download.svg) right center no-repeat;
+  background-origin: content-box;
+  text-align: left;
+  padding: 0 30%;
+  margin-bottom: 40px;
+}
+
+#about-me > button:hover {
+  background: #fff url(./assets/ic_download_dark.svg) right center no-repeat;
   background-origin: content-box;
   text-align: left;
   padding: 0 30%;
