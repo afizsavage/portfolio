@@ -93,6 +93,10 @@ main > section > p {
   justify-content: center;
 }
 
+#about-me {
+  padding-bottom: 40px;
+}
+
 #projects > h2 {
   margin-bottom: 7%;
 }
@@ -116,15 +120,6 @@ main > section > p {
   padding: 19px;
 }
 
-.card > section h3 {
-  font-weight: 300;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 80%;
-  color: #fff;
-  margin: 0;
-}
-
 .card ul > li {
   display: inline;
   background: #98dede;
@@ -136,4 +131,61 @@ main > section > p {
   color: #1a2236;
   padding: 5px 10px;
   margin-right: 5px;
+}
+
+#about-me > article li {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: -0.0525em;
+}
+
+.card > section h3 {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 80%;
+  color: #fff;
+  margin: 0;
+}
+
+#about-me > button {
+  background: #1a2236 url(./assets/ic_download.svg) right center no-repeat;
+  background-origin: content-box;
+  text-align: left;
+  padding: 0 30%;
+  margin-bottom: 40px;
+}
+
+#about-me > article {
+  font-family: "Poppins", sans-serif;
+  min-height: 289px;
+  color: #fff;
+  padding: 0 30px;
+  padding-top: 20px;
+}
+
+#about-me > article:nth-child(odd) {
+  margin: 15px 0;
+}
+
+#about-me h3 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 30px;
+  padding-left: 25px;
+}
+
+#languages {
+  background: #1c528a url(./assets/ic_languages_mob.svg) right bottom no-repeat;
+}
+
+#frameworks {
+  background: #e2505c url(./assets/ic_framework.svg) right bottom no-repeat;
+}
+
+#skills {
+  background: #febf52 url(./assets/ic_skills.svg) right bottom no-repeat;
 }
