@@ -227,3 +227,21 @@ main > section > p {
 #skills {
   background: #febf52 url(./assets/ic_skills.svg) right bottom no-repeat;
 }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background: #fff url(./assets/image_geometry_1.png) no-repeat;
+  padding: 0 19px;
+}
+
+footer #footer-heading {
+  width: 100%;
+  margin-top: 0;
+}
+
+#contact {
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
+}
