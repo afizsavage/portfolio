@@ -185,27 +185,39 @@
             eiusmod tempor incididunt ut labore et dolore magna.
           </p>
           <form action="https://formspree.io/f/mayazvjy" method="post">
-            <label>
-              Name
-              <input type="text" name="name" placeholder="Full name" required />
-            </label>
-
-            <label>
-              Email
-              <input
-                type="email"
-                name="email"
-                placeholder="Email address"
+            <fieldset>
+              <div class="input-container">
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  min="4"
+                  max="30"
+                  required
+                />
+                <label for="name">Your Email</label>
+              </div>
+              <div id="email" class="input-container">
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Your email"
+                  required
+                />
+                <label for="email">Your name</label>
+              </div>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Enter your message here"
                 required
-              />
-            </label>
-            <label>
-              Message
-              <textarea name="message"></textarea>
-            </label>
-            <button class="primary-dark" type="submit">
-              Start Collaboration
-            </button>
+              ></textarea>
+              <button id="submit-btn" class="primary-dark" type="submit">
+                Start Collaboration
+              </button>
+            </fieldset>
           </form>
         </section>
       </footer>

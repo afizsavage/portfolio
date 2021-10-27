@@ -116,7 +116,7 @@ main > section > p {
 }
 
 #about-me {
-  padding-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 #projects > h2 {
@@ -229,19 +229,14 @@ main > section > p {
 }
 
 footer {
+  height: auto;
   display: flex;
   flex-direction: column;
-  background: #fff url(./assets/image_geometry_1.png) no-repeat;
+  background: #f9f9fa url(./assets/image_geometry_1.png) no-repeat;
   padding: 0 19px;
 }
 
 footer #footer-heading {
   width: 100%;
   margin-top: 0;
-}
-
-#contact {
-  height: auto;
-  width: 100%;
-  overflow-x: hidden;
 }
