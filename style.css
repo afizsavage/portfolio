@@ -250,6 +250,11 @@ footer #footer-heading {
   overflow-x: hidden;
 }
 
+#contact h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
 #contact p {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -257,6 +262,8 @@ footer #footer-heading {
   font-style: normal;
   line-height: 21px;
   color: rgba(26, 34, 54, 1);
+  margin-top: 0;
+  margin-bottom: 35px;
 }
 
 #contact fieldset {
@@ -268,13 +275,14 @@ footer #footer-heading {
 
 #contact label {
   display: inline-block;
-  color: black;
   position: absolute;
   bottom: 0;
   transform-origin: top left;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
   transition-duration: 0.2s;
+  color: rgba(125, 124, 132, 1);
+  margin: 0;
 }
 
 #contact textarea,
@@ -299,13 +307,25 @@ input {
   padding: 0 15px;
 }
 
+#contact input:focus {
+  border: 1px solid #1a2236;
+}
+
+#contact input:focus-visible {
+  outline: none;
+}
+
 #contact input:placeholder-shown ~ label {
   visibility: hidden;
 }
 
+#contact input:not(:placeholder-shown) {
+  padding-top: 12px;
+}
+
 #contact input:focus ~ label,
 #contact input:not(:placeholder-shown) ~ label {
-  transform: scale(0.7) translate(1rem, -2.5rem);
+  transform: scale(0.8) translate(1.3rem, -1.8rem);
   margin-bottom: 5px;
 }
 
@@ -314,7 +334,7 @@ input {
   height: 52px;
 }
 
-#email {
+#email-container {
   padding-top: 10px;
 }
 
@@ -328,5 +348,3 @@ input {
   width: 100%;
   margin-top: 20px;
 }
-
-

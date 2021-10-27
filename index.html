@@ -192,13 +192,12 @@
                   type="text"
                   name="name"
                   placeholder="Your name"
-                  min="4"
-                  max="30"
+                  maxlength="30"
                   required
                 />
                 <label for="name">Your Email</label>
               </div>
-              <div id="email" class="input-container">
+              <div id="email-container" class="input-container">
                 <input
                   id="email"
                   type="email"
@@ -206,12 +205,13 @@
                   placeholder="Your email"
                   required
                 />
-                <label for="email">Your name</label>
+                <label for="email">Your email</label>
               </div>
               <textarea
                 id="message"
                 name="message"
                 placeholder="Enter your message here"
+                maxlength="500"
                 required
               ></textarea>
               <button id="submit-btn" class="primary-dark" type="submit">
