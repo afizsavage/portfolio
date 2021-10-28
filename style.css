@@ -199,12 +199,13 @@ main > section p {
   display: block;
 }
 
-#about-me > button {
+#about-me button {
   background: #1a2236 url(./assets/ic_download.svg) right center no-repeat;
   background-origin: content-box;
   text-align: left;
   padding: 0 30%;
   margin-bottom: 40px;
+  width: 100%;
 }
 
 #about-me > button:hover {
@@ -215,7 +216,7 @@ main > section p {
   margin-bottom: 40px;
 }
 
-#about-me > article {
+#about-me article {
   font-family: "Poppins", sans-serif;
   min-height: 289px;
   color: #fff;
@@ -223,7 +224,7 @@ main > section p {
   padding-top: 20px;
 }
 
-#about-me > article:nth-child(odd) {
+#about-me article:nth-child(odd) {
   margin: 15px 0;
 }
 
@@ -233,6 +234,10 @@ main > section p {
   font-size: 20px;
   line-height: 30px;
   padding-left: 25px;
+}
+
+#aboutme1 {
+  display: none;
 }
 
 #languages {
@@ -513,6 +518,18 @@ input {
     margin-left: 180px;
     display: flex;
     align-items: center;
+  }
+
+  #about-me {
+    min-height: 1000px;
+    display: flex;
+    flex-direction: row-reverse;
+    background-image:
+      url(./assets/image-geometry_5.svg),
+      url(./assets/image-geometry_4.svg),
+      url(./assets/Rectangle\ 47.png);
+    background-position: left top, 65.5% top, 90% top;
+    background-repeat: no-repeat, no-repeat no-repeat;
   }
 
   footer {
