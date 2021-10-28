@@ -534,6 +534,8 @@ input {
       url(./assets/Rectangle\ 47.png);
     background-position: left top, 65.5% top, 90% top;
     background-repeat: no-repeat, no-repeat no-repeat;
+    align-items: flex-end;
+    margin-bottom: 150px;
   }
 
   #article {
@@ -544,9 +546,13 @@ input {
   #tools {
     display: grid;
     grid-template-columns: 289px 289px;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     height: calc(289px * 2);
+  }
+
+  #bio {
+    margin-bottom: 170px;
   }
 
   #about-me #tools,
@@ -554,10 +560,27 @@ input {
     width: 50%;
   }
 
+  #bio .headings {
+    margin-left: 130px;
+  }
+
   #about-me article,
   #article {
     height: 289px;
     box-sizing: border-box;
+  }
+
+  #about-me p {
+    width: 446px;
+    margin-top: 35px;
+    margin-left: 130px;
+  }
+
+  #about-me .primary-dark {
+    height: 70px;
+    width: 254px;
+    padding: 0 5%;
+    margin-left: 130px;
   }
 
   #about-me article:nth-child(2n+1) {
