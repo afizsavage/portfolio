@@ -236,6 +236,10 @@ main > section p {
   padding-left: 25px;
 }
 
+#article {
+  display: none;
+}
+
 #aboutme1 {
   display: none;
 }
@@ -449,7 +453,7 @@ input {
 }
 
 /* styling for desktop view */
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   header ul > li {
     font: normal 400 16px/24px "Poppins", sans-serif;
     margin: 0 15px;
@@ -530,6 +534,34 @@ input {
       url(./assets/Rectangle\ 47.png);
     background-position: left top, 65.5% top, 90% top;
     background-repeat: no-repeat, no-repeat no-repeat;
+  }
+
+  #article {
+    display: block;
+    background: url(./assets/Group\ 51.svg) center bottom no-repeat, url(./assets/Shape.svg) right 30% no-repeat;
+  }
+
+  #tools {
+    display: grid;
+    grid-template-columns: 289px 289px;
+    justify-content: center;
+    align-items: center;
+    height: calc(289px * 2);
+  }
+
+  #about-me #tools,
+  #bio {
+    width: 50%;
+  }
+
+  #about-me article,
+  #article {
+    height: 289px;
+    box-sizing: border-box;
+  }
+
+  #about-me article:nth-child(2n+1) {
+    margin: 0;
   }
 
   footer {
