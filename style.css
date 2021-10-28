@@ -39,7 +39,7 @@ main {
   height: auto;
 }
 
-#headline {
+#timeline {
   min-height: 566px;
   display: flex;
   flex-direction: column;
@@ -48,6 +48,10 @@ main {
   background-clip: border-box;
   background-origin: border-box;
   color: #1a2236;
+}
+
+#timeline-btn {
+  width: 100%;
 }
 
 .headings {
@@ -61,7 +65,7 @@ main {
   margin-bottom: 5%;
 }
 
-main > section > p {
+main > section p {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -386,5 +390,52 @@ input {
 
   header img {
     display: none;
+  }
+
+  #timeline {
+    padding: 0;
+    width: 100%;
+    background: #fff url(./assets/image-geometry_1.svg) right center no-repeat;
+  }
+
+  #timeline > div {
+    width: calc(100% - 702px);
+    background: #fff url(./assets/image_dots.svg) right bottom no-repeat;
+    min-height: 877px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #timeline-btn {
+    width: 254px;
+    height: 70px;
+    margin-left: 180px;
+  }
+
+  .primary-dark {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .headings {
+    font: normal normal 110px/100px "Playfair Display", serif;
+    color: #1a2236;
+    min-width: 484px;
+    margin: 0;
+  }
+
+  #timeline .headings {
+    margin-left: 180px;
+    margin-top: 170px;
+  }
+
+  #timeline p {
+    width: 484px;
+    margin: 0;
+    height: 200px;
+    margin-left: 180px;
+    display: flex;
+    align-items: center;
   }
 }
