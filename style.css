@@ -524,6 +524,26 @@ input {
     align-items: center;
   }
 
+  #projects {
+    position: relative;
+    height: 1373px;
+    display: block;
+  }
+
+  #projects .card {
+    display: none;
+  }
+
+  #projects > h2 {
+    position: absolute;
+    top: 10.2%;
+    left: 0;
+    transform: rotate(-90deg);
+    width: 398px;
+    height: auto;
+    margin: 0;
+  }
+
   #about-me {
     min-height: 1000px;
     display: flex;
