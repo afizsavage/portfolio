@@ -352,6 +352,10 @@ input {
   height: 52px;
 }
 
+#large-p {
+  display: none;
+}
+
 #email-container {
   padding-top: 10px;
 }
@@ -434,6 +438,7 @@ input {
   height: 60px;
 }
 
+/* styling for desktop view */
 @media (min-width: 1024px) {
   header ul > li {
     font: normal 400 16px/24px "Poppins", sans-serif;
@@ -505,6 +510,43 @@ input {
     align-items: center;
   }
 
+  footer {
+    background: #f9f9fa;
+  }
+
+  #contact {
+    min-height: 950px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 0 19px;
+    background-image:
+      url(./assets/image-geometry_6.svg),
+      url(./assets/image-geometry_7.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  #contact .headings {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 110px;
+    line-height: 100%;
+    text-align: center;
+  }
+
+  #small-p {
+    display: none;
+  }
+
+  #large-p {
+    display: block;
+    width: 548px;
+    letter-spacing: -0.01em;
+  }
+
   #social {
     height: 123px;
     flex-direction: row;
@@ -523,9 +565,7 @@ input {
   #social .primary-dark {
     width: 190px;
     color: rgba(146, 220, 220, 1);
-    text-align: left;
     background: #1a2236 url(./assets/ic-link_teal.svg) right center no-repeat;
-    padding: 0;
     margin-left: 170px;
     height: 60px;
     cursor: pointer;
