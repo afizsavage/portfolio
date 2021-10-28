@@ -534,6 +534,10 @@ input {
     background-repeat: no-repeat, no-repeat;
   }
 
+  #contact input {
+    height: 60px;
+  }
+
   #contact .headings {
     margin-top: 30px;
     margin-bottom: 20px;
@@ -556,7 +560,7 @@ input {
   #contact .input-container > label {
     display: inline-block;
     position: absolute;
-    top: -30px;
+    top: -40px;
     transform: none;
     transition: none;
     color: rgba(125, 124, 132, 1);
@@ -588,6 +592,7 @@ input {
 
   #contact textarea {
     margin-top: 10px;
+    height: 140px;
   }
 
   #message {
