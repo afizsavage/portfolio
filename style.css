@@ -273,6 +273,10 @@ footer #footer-heading {
   margin-bottom: 20px;
 }
 
+#message-label {
+  display: none;
+}
+
 #contact p {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -289,9 +293,10 @@ footer #footer-heading {
   flex-direction: column;
   border: none;
   padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-#contact label {
+#contact .input-container label {
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -541,14 +546,64 @@ input {
     display: grid;
     grid-template-columns: 254px 253px;
     grid-column-gap: 20px;
+    justify-content: center;
     border: none;
     padding: 0;
     width: 548px;
+    margin-top: 40px;
+  }
+
+  #contact .input-container > label {
+    display: inline-block;
+    position: absolute;
+    top: -30px;
+    transform: none;
+    transition: none;
+    color: rgba(125, 124, 132, 1);
     margin: 0;
+  }
+
+  #message-label {
+    transform: none;
+    visibility: visible;
+    position: static;
+    display: inline-block;
+    margin-top: 20px;
+    color: rgba(125, 124, 132, 1);
+  }
+
+  #contact input:placeholder-shown ~ label {
+    visibility: visible;
+  }
+
+  #contact input:focus ~ label,
+  #contact input:not(:placeholder-shown) ~ label {
+    transform: none;
+    margin-bottom: 5px;
+  }
+
+  #contact input:not(:placeholder-shown) {
+    padding-top: 0;
+  }
+
+  #contact textarea {
+    margin-top: 10px;
   }
 
   #message {
     grid-column: 1 / span 3;
+  }
+
+  #contact .submit-container {
+    grid-column: 1 / span 3;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  #contact .primary-dark {
+    width: 254px;
+    height: 70px;
   }
 
   #email-container {
