@@ -71,7 +71,7 @@ main > section p {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  letter-spacing: -0.01em;
+  letter-spacing: -1%;
   margin-bottom: 40px;
   margin-top: 0;
 }
@@ -504,21 +504,21 @@ input {
   }
 
   .headings {
-    font: normal normal 110px/100px "Playfair Display", serif;
+    font: normal normal 110px/110px "Playfair Display", serif;
     color: #1a2236;
-    min-width: 484px;
     margin: 0;
   }
 
   #timeline .headings {
     margin-left: 180px;
     margin-top: 170px;
+    width: 484px;
   }
 
   #timeline p {
     width: 484px;
     margin: 0;
-    height: 200px;
+    height: 190px;
     margin-left: 180px;
     display: flex;
     align-items: center;
@@ -615,18 +615,22 @@ input {
     margin-bottom: 20px;
     font-size: 110px;
     line-height: 100%;
-    text-align: center;
+    text-align: left;
+    padding-right: 15px;
+    width: 560px;
   }
 
   #contact fieldset {
     display: grid;
-    grid-template-columns: 254px 253px;
-    grid-column-gap: 20px;
+    grid-template-columns: 256px 255px;
+    grid-column-gap: 24px;
     justify-content: center;
     border: none;
     padding: 0;
-    width: 548px;
+    width: 560px;
     margin-top: 40px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   #contact .input-container > label {
@@ -694,7 +698,7 @@ input {
 
   #large-p {
     display: block;
-    width: 548px;
+    width: 560px;
     letter-spacing: -0.01em;
   }
 
