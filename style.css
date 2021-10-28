@@ -504,4 +504,34 @@ input {
     display: flex;
     align-items: center;
   }
+
+  #social {
+    height: 123px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #social ul {
+    justify-content: space-between;
+    width: 296px;
+    height: 60px;
+    align-items: center;
+    margin-right: 170px;
+  }
+
+  #social .primary-dark {
+    width: 190px;
+    color: rgba(146, 220, 220, 1);
+    text-align: left;
+    background: #1a2236 url(./assets/ic-link_teal.svg) right center no-repeat;
+    padding: 0;
+    margin-left: 170px;
+    height: 60px;
+    cursor: pointer;
+  }
+
+  #social .primary-dark:hover {
+    border: none;
+  }
 }
