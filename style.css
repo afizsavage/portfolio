@@ -537,6 +537,25 @@ input {
     text-align: center;
   }
 
+  #contact fieldset {
+    display: grid;
+    grid-template-columns: 254px 253px;
+    grid-column-gap: 20px;
+    border: none;
+    padding: 0;
+    width: 548px;
+    margin: 0;
+  }
+
+  #message {
+    grid-column: 1 / span 3;
+  }
+
+  #email-container {
+    padding: 0;
+    grid-column: 2/4;
+  }
+
   #small-p {
     display: none;
   }
