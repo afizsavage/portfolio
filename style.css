@@ -23,6 +23,40 @@ header ul {
 header > nav a {
   color: rgba(26, 34, 54, 1);
   text-decoration: none;
+  position: relative;
+  transition-duration: 0.25s;
+}
+
+header > nav a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(146, 220, 220, 1);
+  transition: width 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+header > nav a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 0;
+  bottom: 0;
+  right: 0%;
+  background-color: rgba(146, 220, 220, 1);
+  transition: width 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+header > nav a:hover::before {
+  width: 50%;
+}
+
+header > nav a:hover::after {
+  width: 50%;
 }
 
 header ul > li {
@@ -85,6 +119,7 @@ main > section p {
   font-weight: 500;
   font-size: 16px;
   border: none;
+  transition: color 0.5s ease-in-out;
 }
 
 .primary-dark:hover {
@@ -581,6 +616,7 @@ input {
     color: #1a2236;
     background: #fff url(./assets/Union.svg) right center no-repeat;
     background-origin: content-box;
+    transition: color 0.5s ease-in-out;
   }
 
   .primary-white:hover {
@@ -594,12 +630,24 @@ input {
     position: absolute;
     bottom: 0;
     left: 0;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+  }
+
+  #fstp:hover {
+    transform: translateX(60%);
   }
 
   #thrdp {
     position: absolute;
     left: 0;
     bottom: 465px;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+  }
+
+  #thrdp:hover {
+    transform: translateX(150%);
   }
 
   #sndp {
@@ -607,6 +655,12 @@ input {
     top: 0;
     right: 0;
     height: 558px;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+  }
+
+  #sndp:hover {
+    transform: translateX(-45%);
   }
 
   #frtp {
@@ -826,12 +880,18 @@ input {
     margin-right: 0;
   }
 
+  #contact label {
+    transition: all 0.5s ease-in;
+  }
+
+  #contact label:hover {
+    transform: translateX(20px);
+  }
+
   #contact .input-container > label {
     display: inline-block;
     position: absolute;
     top: -40px;
-    transform: none;
-    transition: none;
     color: rgba(125, 124, 132, 1);
     margin: 0;
   }
