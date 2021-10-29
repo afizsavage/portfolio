@@ -536,7 +536,7 @@ input {
       url(./assets/image_dots.svg),
       url(./assets/image-geometry_2.svg),
       url(./assets/image-geometry_3.svg);
-    background-position: calc(100% - 960px) top, 65.5% 558px, right bottom;
+    background-position: calc(100% - 960px) top, calc(100% - 466px) 558px, right bottom;
     background-repeat: no-repeat, no-repeat no-repeat;
     margin-top: 150px;
   }
@@ -580,6 +580,12 @@ input {
     left: 0;
   }
 
+  #thrdp {
+    position: absolute;
+    left: 0;
+    bottom: 465px;
+  }
+
   #sndp {
     position: absolute;
     top: 0;
@@ -587,10 +593,24 @@ input {
     height: 558px;
   }
 
-  #sndp figure {
+  #frtp {
+    position: absolute;
+    right: 0;
+    top: 558px;
+  }
+
+  #sxhp {
+    position: absolute;
+    right: 0;
+    bottom: 274px;
+  }
+
+  #sndp figure,
+  #frtp figure {
     margin: 0;
   }
 
+  #frtp section,
   #sndp section {
     position: absolute;
     bottom: 0;
@@ -598,9 +618,13 @@ input {
     backdrop-filter: blur(24px);
     width: 100%;
     height: 353px;
-    padding-left: 60px;
   }
 
+  #frtp section {
+    height: 218px;
+  }
+
+  #frtp h3,
   #sndp h3 {
     font-family: "Poppins", sans-serif;
     font-style: normal;
@@ -610,14 +634,30 @@ input {
     color: #fff;
     margin-top: 60px;
     margin-bottom: 40px;
+    margin-left: 60px;
   }
 
+  #frtp h3 {
+    font-weight: bold;
+    font-size: 40px;
+    margin: 30px 0 20px 30px;
+    padding: 0;
+  }
+
+  #frtp ul,
   #sndp ul {
     list-style: none;
     padding: 0;
     margin-bottom: 55px;
+    margin-left: 60px;
   }
 
+  #frtp ul {
+    margin-bottom: 22.5px;
+    margin-left: 30px;
+  }
+
+  #frtp li,
   #sndp li {
     display: inline-block;
     background: #98dede;
@@ -629,6 +669,14 @@ input {
     padding: 12px 10px;
     margin-right: 16px;
     font-size: 20px;
+  }
+
+  #sndp .primary-white {
+    margin-left: 60px;
+  }
+
+  #frtp .primary-white {
+    margin-left: 30px;
   }
 
   #about-me {
