@@ -373,7 +373,6 @@ input {
 #message:focus {
   outline: none;
   border: 1px solid #1a2236;
-
 }
 
 #message:focus-visible {
@@ -748,11 +747,33 @@ input {
     margin-left: 130px;
   }
 
+  #social .primary-dark {
+    width: 190px;
+    color: rgba(146, 220, 220, 1);
+    background: #1a2236 url(./assets/ic-link_teal.svg) right center no-repeat;
+    margin-left: 170px;
+    height: 60px;
+    cursor: pointer;
+  }
+
   #about-me .primary-dark {
     height: 70px;
     width: 254px;
     padding: 0 5%;
     margin-left: 130px;
+  }
+
+  #contact .primary-dark {
+    width: 254px;
+    height: 70px;
+  }
+
+  #about-me .primary-dark:hover {
+    height: 70px;
+    width: 254px;
+    padding: 0 5%;
+    margin-left: 130px;
+    background-color: #fff;
   }
 
   #about-me article:nth-child(2n+1) {
@@ -854,11 +875,6 @@ input {
     margin-top: 30px;
   }
 
-  #contact .primary-dark {
-    width: 254px;
-    height: 70px;
-  }
-
   #email-container {
     padding: 0;
     grid-column: 2/4;
@@ -887,15 +903,6 @@ input {
     height: 60px;
     align-items: center;
     margin-right: 170px;
-  }
-
-  #social .primary-dark {
-    width: 190px;
-    color: rgba(146, 220, 220, 1);
-    background: #1a2236 url(./assets/ic-link_teal.svg) right center no-repeat;
-    margin-left: 170px;
-    height: 60px;
-    cursor: pointer;
   }
 
   #social .primary-dark:hover {
