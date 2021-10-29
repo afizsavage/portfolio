@@ -370,6 +370,16 @@ input {
   height: 52px;
 }
 
+#message:focus {
+  outline: none;
+  border: 1px solid #1a2236;
+
+}
+
+#message:focus-visible {
+  outline: none;
+}
+
 #large-p {
   display: none;
 }
