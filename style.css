@@ -574,6 +574,13 @@ input {
     background-origin: content-box;
   }
 
+  .primary-white:hover {
+    border: 1px solid #fff;
+    color: #fff;
+    background: #1a2236 url(./assets/ic_arrow_right.svg) right center no-repeat;
+    background-origin: content-box;
+  }
+
   #fstp {
     position: absolute;
     bottom: 0;
