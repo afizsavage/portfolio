@@ -14,6 +14,21 @@ header {
   padding: 0 19px;
 }
 
+header ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+
+header > nav a {
+  color: rgba(26, 34, 54, 1);
+  text-decoration: none;
+}
+
+header ul > li {
+  display: inline;
+}
+
 #menu-icon {
   position: absolute;
   top: 19px;
@@ -24,7 +39,7 @@ main {
   height: auto;
 }
 
-#headline {
+#timeline {
   min-height: 566px;
   display: flex;
   flex-direction: column;
@@ -33,6 +48,10 @@ main {
   background-clip: border-box;
   background-origin: border-box;
   color: #1a2236;
+}
+
+#timeline-btn {
+  width: 100%;
 }
 
 .headings {
@@ -46,13 +65,13 @@ main {
   margin-bottom: 5%;
 }
 
-main > section > p {
+main > section p {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  letter-spacing: -0.01em;
+  letter-spacing: -1%;
   margin-bottom: 40px;
   margin-top: 0;
 }
@@ -123,6 +142,14 @@ main > section > p {
   margin-bottom: 7%;
 }
 
+.card img {
+  display: block;
+}
+
+#projects .loss {
+  display: none;
+}
+
 .card {
   font-family: "Poppins", sans-serif;
   display: flex;
@@ -176,16 +203,13 @@ main > section > p {
   margin: 0;
 }
 
-.card img {
-  display: block;
-}
-
-#about-me > button {
+#about-me button {
   background: #1a2236 url(./assets/ic_download.svg) right center no-repeat;
   background-origin: content-box;
   text-align: left;
   padding: 0 30%;
   margin-bottom: 40px;
+  width: 100%;
 }
 
 #about-me > button:hover {
@@ -196,7 +220,7 @@ main > section > p {
   margin-bottom: 40px;
 }
 
-#about-me > article {
+#about-me article {
   font-family: "Poppins", sans-serif;
   min-height: 289px;
   color: #fff;
@@ -204,7 +228,7 @@ main > section > p {
   padding-top: 20px;
 }
 
-#about-me > article:nth-child(odd) {
+#about-me article:nth-child(odd) {
   margin: 15px 0;
 }
 
@@ -214,6 +238,14 @@ main > section > p {
   font-size: 20px;
   line-height: 30px;
   padding-left: 25px;
+}
+
+#article {
+  display: none;
+}
+
+#aboutme1 {
+  display: none;
 }
 
 #languages {
@@ -233,7 +265,6 @@ footer {
   display: flex;
   flex-direction: column;
   background: #f9f9fa url(./assets/image_geometry_1.png) no-repeat;
-  padding: 0 19px;
 }
 
 footer #footer-heading {
@@ -246,13 +277,17 @@ footer #footer-heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
   overflow-x: hidden;
+  padding: 0 19px;
 }
 
 #contact h2 {
   margin-top: 30px;
   margin-bottom: 20px;
+}
+
+#message-label {
+  display: none;
 }
 
 #contact p {
@@ -271,9 +306,10 @@ footer #footer-heading {
   flex-direction: column;
   border: none;
   padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-#contact label {
+#contact .input-container label {
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -334,6 +370,19 @@ input {
   height: 52px;
 }
 
+#message:focus {
+  outline: none;
+  border: 1px solid #1a2236;
+}
+
+#message:focus-visible {
+  outline: none;
+}
+
+#large-p {
+  display: none;
+}
+
 #email-container {
   padding-top: 10px;
 }
@@ -347,4 +396,516 @@ input {
 #submit-btn {
   width: 100%;
   margin-top: 20px;
+}
+
+#social ul {
+  list-style: none;
+  padding: 0;
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  height: 60px;
+  align-items: center;
+}
+
+#social {
+  background: #1a2236;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  padding: 19px 0;
+  justify-content: center;
+}
+
+#stackoverflow {
+  background: url(./assets/ic_stackoverflow.svg) center center no-repeat;
+}
+
+#twitter {
+  background: url(./assets/ic_twitter.svg) center center no-repeat;
+}
+
+#github {
+  background: url(./assets/ic_github.svg) center center no-repeat;
+}
+
+#linkedin {
+  background: url(./assets/ic_linkedin.svg) center center no-repeat;
+}
+
+#medium {
+  background: url(./assets/ic_medium.svg) center center no-repeat;
+}
+
+#angelist {
+  background: url(./assets/ic_angellist.svg) center center no-repeat;
+}
+
+#social > ul > li {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+#social ul a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+#social .primary-dark {
+  width: 164px;
+  color: rgba(146, 220, 220, 1);
+  text-align: left;
+  background: url(./assets/ic_link_teal.svg) right center no-repeat;
+  padding: 0;
+  margin-left: 20px;
+  height: 60px;
+}
+
+/* styling for desktop view */
+@media (min-width: 992px) {
+  header ul > li {
+    font: normal 400 16px/24px "Poppins", sans-serif;
+    margin: 0 15px;
+  }
+
+  header ul {
+    display: inline-block;
+  }
+
+  header {
+    background: white;
+    height: 100px;
+    box-shadow: 0 0.5px 0 #dddfe6;
+    border-bottom: 1px solid #dfdfe0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header img {
+    display: none;
+  }
+
+  #timeline {
+    padding: 0;
+    width: 100%;
+    background: #fff url(./assets/image-geometry_1.svg) right center no-repeat;
+  }
+
+  #timeline > div {
+    width: calc(100% - 702px);
+    background: #fff url(./assets/image_dots.svg) right bottom no-repeat;
+    min-height: 877px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #timeline-btn {
+    width: 254px;
+    height: 70px;
+    margin-left: 180px;
+  }
+
+  .primary-dark {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .headings {
+    font: normal normal 110px/110px "Playfair Display", serif;
+    color: #1a2236;
+    margin: 0;
+  }
+
+  #timeline .headings {
+    margin-left: 180px;
+    margin-top: 170px;
+    width: 484px;
+  }
+
+  #timeline p {
+    width: 484px;
+    margin: 0;
+    height: 190px;
+    margin-left: 180px;
+    display: flex;
+    align-items: center;
+  }
+
+  #projects {
+    position: relative;
+    height: 1373px;
+    display: block;
+    background-image:
+      url(./assets/image_dots.svg),
+      url(./assets/image-geometry_2.svg),
+      url(./assets/image-geometry_3.svg);
+    background-position: calc(100% - 960px) top, calc(100% - 466px) 558px, right bottom;
+    background-repeat: no-repeat, no-repeat no-repeat;
+    margin-top: 150px;
+  }
+
+  #projects .card {
+    display: none;
+  }
+
+  #projects > h2 {
+    position: absolute;
+    top: 10.2%;
+    left: 0;
+    transform: rotate(-90deg);
+    width: 398px;
+    height: auto;
+    margin: 0;
+  }
+
+  #projects .loss {
+    display: block;
+  }
+
+  .primary-white {
+    width: 212px;
+    height: 51px;
+    padding: 0 15px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: left;
+    color: #1a2236;
+    background: #fff url(./assets/Union.svg) right center no-repeat;
+    background-origin: content-box;
+  }
+
+  .primary-white:hover {
+    border: 1px solid #fff;
+    color: #fff;
+    background: #1a2236 url(./assets/ic_arrow_right.svg) right center no-repeat;
+    background-origin: content-box;
+  }
+
+  #fstp {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  #thrdp {
+    position: absolute;
+    left: 0;
+    bottom: 465px;
+  }
+
+  #sndp {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 558px;
+  }
+
+  #frtp {
+    position: absolute;
+    right: 0;
+    top: 558px;
+  }
+
+  #sxhp {
+    position: absolute;
+    right: 0;
+    bottom: 274px;
+  }
+
+  #sndp figure,
+  #frtp figure {
+    margin: 0;
+  }
+
+  #frtp section,
+  #sndp section {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(26, 34, 54, 0.95), rgba(26, 34, 54, 0.95));
+    backdrop-filter: blur(24px);
+    width: 100%;
+    height: 353px;
+  }
+
+  #frtp section {
+    height: 218px;
+  }
+
+  #frtp h3,
+  #sndp h3 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 80%;
+    color: #fff;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    margin-left: 60px;
+  }
+
+  #frtp h3 {
+    font-weight: bold;
+    font-size: 40px;
+    margin: 30px 0 20px 30px;
+    padding: 0;
+  }
+
+  #frtp ul,
+  #sndp ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 55px;
+    margin-left: 60px;
+  }
+
+  #frtp ul {
+    margin-bottom: 22.5px;
+    margin-left: 30px;
+  }
+
+  #frtp li,
+  #sndp li {
+    display: inline-block;
+    background: #98dede;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 80%;
+    color: #1a2236;
+    padding: 12px 10px;
+    margin-right: 16px;
+    font-size: 20px;
+  }
+
+  #sndp .primary-white {
+    margin-left: 60px;
+  }
+
+  #frtp .primary-white {
+    margin-left: 30px;
+  }
+
+  #about-me {
+    min-height: 1000px;
+    display: flex;
+    flex-direction: row-reverse;
+    background-image:
+      url(./assets/image-geometry_5.svg),
+      url(./assets/image-geometry_4.svg),
+      url(./assets/Rectangle\ 47.png);
+    background-position: left top, 63.5% top, 87% top;
+    background-repeat: no-repeat, no-repeat no-repeat;
+    align-items: flex-end;
+    margin-bottom: 150px;
+  }
+
+  #article {
+    display: block;
+    background: url(./assets/Group\ 51.svg) center bottom no-repeat, url(./assets/Shape.svg) right 30% no-repeat;
+  }
+
+  #tools {
+    display: grid;
+    grid-template-columns: 289px 289px;
+    justify-content: end;
+    align-items: center;
+    height: calc(289px * 2);
+  }
+
+  #bio {
+    margin-bottom: 170px;
+  }
+
+  #about-me #tools,
+  #bio {
+    width: 50%;
+  }
+
+  #bio .headings {
+    margin-left: 130px;
+  }
+
+  #about-me article,
+  #article {
+    height: 289px;
+    box-sizing: border-box;
+  }
+
+  #about-me p {
+    width: 446px;
+    margin-top: 35px;
+    margin-left: 130px;
+  }
+
+  #social .primary-dark {
+    width: 190px;
+    color: rgba(146, 220, 220, 1);
+    background: #1a2236 url(./assets/ic-link_teal.svg) right center no-repeat;
+    margin-left: 170px;
+    height: 60px;
+    cursor: pointer;
+  }
+
+  #about-me .primary-dark {
+    height: 70px;
+    width: 254px;
+    padding: 0 5%;
+    margin-left: 130px;
+  }
+
+  #contact .primary-dark {
+    width: 254px;
+    height: 70px;
+  }
+
+  #about-me .primary-dark:hover {
+    height: 70px;
+    width: 254px;
+    padding: 0 5%;
+    margin-left: 130px;
+    background-color: #fff;
+  }
+
+  #about-me article:nth-child(2n+1) {
+    margin: 0;
+  }
+
+  footer {
+    background: #f9f9fa;
+  }
+
+  #contact {
+    min-height: 950px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 0 19px;
+    background-image:
+      url(./assets/image-geometry_6.svg),
+      url(./assets/image-geometry_7.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  #contact input {
+    height: 60px;
+  }
+
+  #contact .headings {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 110px;
+    line-height: 100%;
+    text-align: left;
+    padding-right: 15px;
+    width: 560px;
+  }
+
+  #contact fieldset {
+    display: grid;
+    grid-template-columns: 256px 255px;
+    grid-column-gap: 24px;
+    justify-content: center;
+    border: none;
+    padding: 0;
+    width: 560px;
+    margin-top: 40px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #contact .input-container > label {
+    display: inline-block;
+    position: absolute;
+    top: -40px;
+    transform: none;
+    transition: none;
+    color: rgba(125, 124, 132, 1);
+    margin: 0;
+  }
+
+  #message-label {
+    transform: none;
+    visibility: visible;
+    position: static;
+    display: inline-block;
+    margin-top: 20px;
+    color: rgba(125, 124, 132, 1);
+  }
+
+  #contact input:placeholder-shown ~ label {
+    visibility: visible;
+  }
+
+  #contact input:focus ~ label,
+  #contact input:not(:placeholder-shown) ~ label {
+    transform: none;
+    margin-bottom: 5px;
+  }
+
+  #contact input:not(:placeholder-shown) {
+    padding-top: 0;
+  }
+
+  #contact textarea {
+    margin-top: 10px;
+    height: 140px;
+  }
+
+  #message {
+    grid-column: 1 / span 3;
+  }
+
+  #contact .submit-container {
+    grid-column: 1 / span 3;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  #email-container {
+    padding: 0;
+    grid-column: 2/4;
+  }
+
+  #small-p {
+    display: none;
+  }
+
+  #large-p {
+    display: block;
+    width: 560px;
+    letter-spacing: -0.01em;
+  }
+
+  #social {
+    height: 123px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #social ul {
+    justify-content: space-between;
+    width: 296px;
+    height: 60px;
+    align-items: center;
+    margin-right: 170px;
+  }
+
+  #social .primary-dark:hover {
+    border: none;
+  }
 }

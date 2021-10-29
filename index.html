@@ -27,17 +27,28 @@
           width="20"
           height="14"
         />
+        <ul>
+          <li><a href="">Hello</a></li>
+          <li><a href="">Portfolio</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
       </nav>
     </header>
     <main>
-      <section id="headline">
-        <h1 class="headings">Afiz Savage</h1>
-        <p>
-          Hello! I am a software developer! I can help you build a product,
-          feature or website. Taka a look of my works. If you like what you see
-          and have a project you need coded, don’t hesitate and contact me.
-        </p>
-        <button class="primary-dark" type="button">Start Collaboration</button>
+      <section id="timeline">
+        <div>
+          <h1 class="headings">Afiz Savage</h1>
+          <p>
+            Hello! I am a software developer! I can help you build a product,
+            feature or website. Taka a look of my works. <br />
+            If you like what you see and have a project you need coded, don’t
+            hesitate and contact me.
+          </p>
+          <button id="timeline-btn" class="primary-dark" type="button">
+            Start Collaboration
+          </button>
+        </div>
       </section>
       <section id="projects">
         <h2 class="headings">Projects</h2>
@@ -137,52 +148,116 @@
             </button>
           </section>
         </div>
+        <figure class="loss">
+          <img
+            src="./assets/Rectangle_46.svg"
+            alt="project-screenshot"
+            id="thrdp"
+          />
+        </figure>
+        <figure class="loss">
+          <img
+            src="./assets/Rectangle27.svg"
+            alt="project-screenshot"
+            id="fstp"
+          />
+        </figure>
+        <div id="sndp" class="loss">
+          <figure>
+            <img src="./assets/Rectangle21.png" alt="project-screenshot" />
+          </figure>
+          <section>
+            <h3>Project name goes</h3>
+            <ul>
+              <li>HTML/CSS</li>
+              <li>Ruby on Rails</li>
+              <li>Javascript</li>
+            </ul>
+            <button class="primary-white" type="button">
+              See this project
+            </button>
+          </section>
+        </div>
+        <div id="frtp" class="loss">
+          <figure>
+            <img src="./assets/Rectangle25.png" alt="project-screenshot" />
+          </figure>
+          <section>
+            <h3>Project name goes...</h3>
+            <ul>
+              <li>HTML/CSS</li>
+              <li>Ruby on Rails</li>
+              <li>+1</li>
+            </ul>
+            <button class="primary-white" type="button">
+              See this project
+            </button>
+          </section>
+        </div>
+        <figure class="loss">
+          <img
+            src="./assets/Rectangle26.svg"
+            alt="project-screenshot"
+            id="sxhp"
+          />
+        </figure>
       </section>
       <section id="about-me">
-        <h2 class="headings">About</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ea eiusmod
-        </p>
-        <button class="primary-dark" type="button">Get my CV</button>
-        <article id="languages">
-          <h3>Languages</h3>
-          <ul>
-            <li>Javascript(ES5/ES6)</li>
-            <li>Ruby</li>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </article>
-        <article id="frameworks">
-          <h3>Frameworks</h3>
-          <ul>
-            <li>Bootstrap</li>
-            <li>Ruby on rails</li>
-            <li>RSpec</li>
-            <li>Capibara</li>
-            <li>Selenium</li>
-          </ul>
-        </article>
-        <article id="skills">
-          <h3>Skills</h3>
-          <ul>
-            <li>Codekit</li>
-            <li>Codepen</li>
-            <li>GitHub</li>
-            <li>GitLAB</li>
-            <li>Terminal</li>
-          </ul>
-        </article>
+        <div id="bio">
+          <h2 class="headings">About</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ea eiusmod
+          </p>
+          <button class="primary-dark" type="button">Get my CV</button>
+        </div>
+        <div id="tools">
+          <article id="languages">
+            <h3>Languages</h3>
+            <ul>
+              <li>Javascript(ES5/ES6)</li>
+              <li>Ruby</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </article>
+          <article id="frameworks">
+            <h3>Frameworks</h3>
+            <ul>
+              <li>Bootstrap</li>
+              <li>Ruby on rails</li>
+              <li>RSpec</li>
+              <li>Capibara</li>
+              <li>Selenium</li>
+            </ul>
+          </article>
+          <article id="skills">
+            <h3>Skills</h3>
+            <ul>
+              <li>Codekit</li>
+              <li>Codepen</li>
+              <li>GitHub</li>
+              <li>GitLAB</li>
+              <li>Terminal</li>
+            </ul>
+          </article>
+          <div id="article"></div>
+        </div>
       </section>
       <footer>
         <section id="contact">
           <h2 id="footer-heading" class="headings">Get Started</h2>
-          <p>
+          <p id="small-p">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna.
+          </p>
+          <p id="large-p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
           </p>
           <form action="https://formspree.io/f/mayazvjy" method="post">
             <fieldset>
@@ -207,6 +282,7 @@
                 />
                 <label for="email">Your email</label>
               </div>
+              <label id="message-label" for="message">Message</label>
               <textarea
                 id="message"
                 name="message"
@@ -214,12 +290,25 @@
                 maxlength="500"
                 required
               ></textarea>
-              <button id="submit-btn" class="primary-dark" type="submit">
-                Start Collaboration
-              </button>
+              <div class="submit-container">
+                <button id="submit-btn" class="primary-dark" type="submit">
+                  Start Collaboration
+                </button>
+              </div>
             </fieldset>
           </form>
         </section>
+        <div id="social">
+          <button type="button" class="primary-dark">Get my resume</button>
+          <ul>
+            <li><a href="" id="stackoverflow"></a></li>
+            <li><a href="" id="github"></a></li>
+            <li><a href="" id="twitter"></a></li>
+            <li><a href="" id="linkedin"></a></li>
+            <li><a href="" id="medium"></a></li>
+            <li><a href="" id="angelist"></a></li>
+          </ul>
+        </div>
       </footer>
     </main>
   </body>
