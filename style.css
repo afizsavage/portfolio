@@ -828,6 +828,7 @@ input {
     padding: 0 5%;
     margin-left: 130px;
     background-color: #fff;
+    background-image: url(./assets/ic_download_dark.svg);
   }
 
   #about-me article:nth-child(2n+1) {
