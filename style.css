@@ -36,7 +36,7 @@ header > nav a::before {
   bottom: 0;
   left: 0;
   background-color: rgba(146, 220, 220, 1);
-  transition: width 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: width 0.3s ease-in-out;
 }
 
 header > nav a::after {
@@ -48,7 +48,7 @@ header > nav a::after {
   bottom: 0;
   right: 0%;
   background-color: rgba(146, 220, 220, 1);
-  transition: width 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: width 0.3s ease-in-out;
 }
 
 header > nav a:hover::before {
