@@ -119,7 +119,7 @@ main > section p {
   font-weight: 500;
   font-size: 16px;
   border: none;
-  transition: color 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .primary-dark:hover {
@@ -616,7 +616,7 @@ input {
     color: #1a2236;
     background: #fff url(./assets/Union.svg) right center no-repeat;
     background-origin: content-box;
-    transition: color 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 
   .primary-white:hover {
@@ -630,12 +630,12 @@ input {
     position: absolute;
     bottom: 0;
     left: 0;
-    transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in 0.5s;
     cursor: pointer;
   }
 
   #fstp:hover {
-    transform: translateX(60%);
+    transform: translateX(58%);
   }
 
   #thrdp {
@@ -647,7 +647,7 @@ input {
   }
 
   #thrdp:hover {
-    transform: translateX(150%);
+    transform: scale(1.72) translate(20.9%, -20%);
   }
 
   #sndp {
@@ -655,7 +655,7 @@ input {
     top: 0;
     right: 0;
     height: 558px;
-    transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in 0.5s;
     cursor: pointer;
   }
 
@@ -667,12 +667,25 @@ input {
     position: absolute;
     right: 0;
     top: 558px;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+  }
+
+  #frtp:hover {
+    transform: scale(2.1) translate(-24.5%, 25.5%);
+    z-index: 5;
   }
 
   #sxhp {
     position: absolute;
     right: 0;
     bottom: 274px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+
+  #sxhp:hover {
+    transform: scale(2.1) translate(-24.5%, -23%);
   }
 
   #sndp figure,
@@ -968,5 +981,7 @@ input {
 
   #social .primary-dark:hover {
     border: none;
+    color: #fff;
+    background-image: url(./assets/ic_download.svg);
   }
 }
