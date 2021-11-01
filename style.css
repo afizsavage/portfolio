@@ -120,6 +120,7 @@ main > section p {
   font-size: 16px;
   border: none;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .primary-dark:hover {
@@ -152,6 +153,7 @@ main > section p {
   color: #fff;
   background: #1a2236;
   border: 1px solid #fff;
+  cursor: pointer;
 }
 
 .secondary-dark:hover {
@@ -617,6 +619,7 @@ input {
     background: #fff url(./assets/Union.svg) right center no-repeat;
     background-origin: content-box;
     transition: all 0.5s ease-in-out;
+    cursor: pointer;
   }
 
   .primary-white:hover {
@@ -680,7 +683,7 @@ input {
     position: absolute;
     right: 0;
     bottom: 274px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in;
     cursor: pointer;
   }
 
