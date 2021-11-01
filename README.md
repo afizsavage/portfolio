@@ -4,13 +4,17 @@
 
 > This is my personal portfolio website.
 
-![screenshot](assets/app-Screenshot.png)
+![screenshot](assets/app.screenshot.png)
 
 The website has sections for the collection of my most recent projects, contact information, and a link to download my CV.
 
 ## Built With
 
 - HTML, CSS
+
+## Live Demo
+
+- [Demo](https://afizsavage.github.io/portfolio/)
 
 ## Getting Started
 
@@ -49,9 +53,9 @@ Open the index.html file in the a browser
 
 👤 **Afiz Savage**
 
-- GitHub: [@githubhandle](https://github.com/afizsavage)
-- Twitter: [@twitterhandle](https://twitter.com/fizzo_geek)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/afiz-savage-3b91a21ba/)
+- GitHub: [@afizsavage](https://github.com/afizsavage)
+- Twitter: [@fizzo_geek](https://twitter.com/fizzo_geek)
+- LinkedIn: [@afiz-savage](https://www.linkedin.com/in/afiz-savage-3b91a21ba/)
 
 ## Show your support
 
