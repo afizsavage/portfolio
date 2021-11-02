@@ -530,7 +530,7 @@ input {
   #timeline {
     padding: 0;
     width: 100%;
-    background: #fff url(./assets/image-geometry_1.svg) right center no-repeat;
+    background: #fff url(./assets/image-geometry_1.png) right center no-repeat;
   }
 
   #timeline > div {
@@ -865,7 +865,7 @@ input {
     padding: 0 19px;
     background-image:
       url(./assets/image-geometry_6.svg),
-      url(./assets/image-geometry_7.svg);
+      url(./assets/image-geometry_7.png);
     background-position: left top, right bottom;
     background-repeat: no-repeat, no-repeat;
   }
