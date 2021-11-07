@@ -903,12 +903,12 @@ input {
   }
 
   #contact label {
-    transition: all 0.5s ease-in;
+    cursor: pointer;
   }
 
-  #contact label:hover {
+  /* #contact label:hover {
     transform: translateX(20px);
-  }
+  } */
 
   #contact .input-container > label {
     display: inline-block;
@@ -929,6 +929,8 @@ input {
 
   #contact input:placeholder-shown ~ label {
     visibility: visible;
+    height: 1rem;
+    transform: none;
   }
 
   #contact input:focus ~ label,
