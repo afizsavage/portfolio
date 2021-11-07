@@ -7,11 +7,15 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: end;
   height: 74px;
   background: #fff url(./assets/image_geometry_1.png) no-repeat;
   padding: 0 19px;
+  width: 100%;
+  z-index: 50;
 }
 
 header ul {
@@ -78,6 +82,7 @@ main {
   display: flex;
   flex-direction: column;
   padding: 0 19px;
+  margin-top: 5.6%;
   background: #fff url(./assets/image_geometry_2.png) center bottom no-repeat;
   background-clip: border-box;
   background-origin: border-box;
@@ -898,12 +903,12 @@ input {
   }
 
   #contact label {
-    transition: all 0.5s ease-in;
+    cursor: pointer;
   }
 
-  #contact label:hover {
+  /* #contact label:hover {
     transform: translateX(20px);
-  }
+  } */
 
   #contact .input-container > label {
     display: inline-block;
@@ -924,6 +929,8 @@ input {
 
   #contact input:placeholder-shown ~ label {
     visibility: visible;
+    height: 1rem;
+    transform: none;
   }
 
   #contact input:focus ~ label,
