@@ -220,6 +220,10 @@ main > section p {
   flex-direction: column;
 }
 
+.menu-list li {
+  margin-top: 1rem;
+}
+
 .card ul {
   list-style: none;
   padding: 0;
@@ -1025,4 +1029,11 @@ input {
     color: #fff;
     background-image: url(./assets/ic_download.svg);
   }
+}
+
+.menu-list {
+  position: relative;
+  left: 8rem;
+  top: 10rem;
+  font-family: Poppins, sans-serif;
 }

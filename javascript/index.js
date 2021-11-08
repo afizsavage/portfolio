@@ -18,3 +18,4 @@ menuButton.addEventListener('click', () => {
   header.classList.toggle('mobile');
   checkIfMenuOpen(mobileMenu, menuButton);
 });
+
