@@ -6,24 +6,40 @@ body {
   overflow-y: scroll;
 }
 
+body.disScroll {
+  overflow-y: hidden;
+}
+
 header {
   top: 0;
   display: flex;
   justify-content: end;
   height: 74px;
   background: #fff url(./assets/image_geometry_1.png) no-repeat;
-  padding: 0 19px;
+  padding: 0;
   z-index: 50;
 }
 
 header.mobile {
   height: 100vh;
-  background: #fff url(./assets/Group98.png) left top no-repeat;
+  position: absolute;
+  width: 100%;
+  background-image:
+    url(./assets/Group98.png),
+    url(./assets/Group\ 51.png),
+    url(./assets/Group\ 51.png),
+    url(./assets/Mask\ Group.png);
+  background-position: left top, 77% 12%, 23% 83%, center bottom;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 }
 
 header ul {
   list-style: none;
   padding: 0;
+}
+
+header > nav {
+  width: 100%;
 }
 
 header > nav a {
@@ -539,6 +555,10 @@ input {
 
   header img {
     display: none;
+  }
+
+  header > nav {
+    width: auto;
   }
 
   header > nav > div {
