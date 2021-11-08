@@ -1,7 +1,7 @@
 const menuButton = document.querySelector('nav > img');
 const mobileMenu = document.querySelector('nav > div');
 const header = document.querySelector('header');
-const navLinks = document.querySelector('nav a');
+const navLinks = document.querySelectorAll('nav a');
 const body = document.querySelector('body');
 
 function checkIfMenuOpen(menu, button) {
@@ -16,10 +16,16 @@ function checkIfMenuOpen(menu, button) {
   }
 }
 
-navLinks.addEventListener('click', () => {
-  mobileMenu.classList.remove('show');
-  checkIfMenuOpen(mobileMenu, menuButton);
-});
+function addEvtListenerToNavlinks() {
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('show');
+      checkIfMenuOpen(mobileMenu, menuButton);
+    });
+  });
+}
+
+addEvtListenerToNavlinks();
 
 menuButton.addEventListener('click', () => {
   mobileMenu.classList.toggle('show');
