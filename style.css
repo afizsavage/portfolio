@@ -265,14 +265,6 @@ main > section p {
   margin-right: 5px;
 }
 
-#about-me > article li {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 27px;
-  letter-spacing: -0.0525em;
-}
-
 .card > section h3 {
   font-weight: 300;
   font-style: normal;
@@ -280,6 +272,110 @@ main > section p {
   line-height: 80%;
   color: #fff;
   margin: 0;
+}
+
+#modal {
+  z-index: 100;
+  height: auto;
+  overflow-y: scroll;
+  position: fixed;
+  top: 2%;
+  bottom: 2%;
+  width: 100%;
+  background-color: #fff;
+}
+
+#modal article {
+  padding-top: 3.5rem;
+}
+
+#modal-icon {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+}
+
+#modal h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  line-height: 16px;
+  color: rgba(26, 34, 54, 1);
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+#modal ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#modal article > ul li {
+  display: inline;
+  border: 0.516669px solid #1a2236;
+  padding: 5px 10px;
+  margin-right: 6px;
+  font-size: 10.3334px;
+  font-weight: 300;
+}
+
+#modal div {
+  height: 202.7px;
+  width: 278.75px;
+  position: relative;
+}
+
+#modal div ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#modal div li {
+  position: absolute;
+}
+
+#modal p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  width: 281px;
+  margin: 20px 0;
+  font-weight: 400;
+}
+
+#first {
+  height: 164px;
+  left: 0;
+}
+
+#second {
+  left: 69.5px;
+}
+
+#third {
+  left: calc(69.5px * 2);
+}
+
+#fifth {
+  left: calc(69.5px * 3);
+}
+
+#second,
+#third,
+#fourth,
+#fifth {
+  bottom: 0;
+  height: 41px;
+}
+
+#about-me > article li {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: -0.0525em;
 }
 
 .card figure {
