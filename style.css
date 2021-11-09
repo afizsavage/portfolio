@@ -635,14 +635,16 @@ input {
 
   #projects {
     position: relative;
-    height: 1373px;
+    height: 1700px;
     display: block;
     background-image:
       url(./assets/image_dots.svg),
       url(./assets/image-geometry_2.svg),
-      url(./assets/image-geometry_3.svg);
-    background-position: calc(100% - 960px) top, calc(100% - 466px) 558px, right bottom;
-    background-repeat: no-repeat, no-repeat no-repeat;
+      url(./assets/image-geometry_3.svg),
+      url(./assets/image-geometry_5.svg),
+      url(./assets/image-geometry_4.svg);
+    background-position: calc(100% - 59.5%) calc(100% - 99.92%), calc(100% - 466px) 558px, right bottom, right bottom, right bottom;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
     margin-top: 150px;
   }
 
@@ -652,8 +654,8 @@ input {
 
   #projects > h2 {
     position: absolute;
-    top: 10.2%;
-    left: 0;
+    top: 8.5%;
+    left: 11%;
     transform: rotate(-90deg);
     width: 398px;
     height: auto;
@@ -696,20 +698,12 @@ input {
     cursor: pointer;
   }
 
-  #fstp:hover {
-    transform: translateX(58%);
-  }
-
   #thrdp {
     position: absolute;
     left: 0;
     bottom: 465px;
     transition: all 0.5s ease-in;
     cursor: pointer;
-  }
-
-  #thrdp:hover {
-    transform: scale(1.72) translate(20.9%, -20%);
   }
 
   #sndp {
@@ -721,21 +715,12 @@ input {
     cursor: pointer;
   }
 
-  #sndp:hover {
-    transform: translateX(-45%);
-  }
-
   #frtp {
     position: absolute;
     right: 0;
     top: 558px;
     transition: all 0.5s ease-in;
     cursor: pointer;
-  }
-
-  #frtp:hover {
-    transform: scale(2.1) translate(-24.5%, 25.5%);
-    z-index: 5;
   }
 
   #sxhp {
@@ -746,17 +731,29 @@ input {
     cursor: pointer;
   }
 
-  #sxhp:hover {
-    transform: scale(2.1) translate(-24.5%, -23%);
+  #fftp {
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
   }
 
+  #fftp figure,
+  #sxhp figure,
+  #thrdp figure,
   #sndp figure,
-  #frtp figure {
+  #frtp figure,
+  #fstp figure {
     margin: 0;
   }
 
+  #fftp section,
+  #sxhp section,
+  #thrdp section,
   #frtp section,
-  #sndp section {
+  #sndp section,
+  #fstp section {
     position: absolute;
     bottom: 0;
     background: linear-gradient(0deg, rgba(26, 34, 54, 0.95), rgba(26, 34, 54, 0.95));
@@ -765,12 +762,19 @@ input {
     height: 353px;
   }
 
-  #frtp section {
+  #fftp section,
+  #sxhp section,
+  #frtp section,
+  #thrdp section {
     height: 218px;
   }
 
+  #fftp h3,
+  #sxhp h3,
+  #thrdp h3,
   #frtp h3,
-  #sndp h3 {
+  #sndp h3,
+  #fstp h3 {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -782,6 +786,9 @@ input {
     margin-left: 60px;
   }
 
+  #fftp h3,
+  #sxhp h3,
+  #thrdp h3,
   #frtp h3 {
     font-weight: bold;
     font-size: 40px;
@@ -789,21 +796,32 @@ input {
     padding: 0;
   }
 
+  #fftp ul,
+  #sxhp ul,
+  #thrdp ul,
   #frtp ul,
-  #sndp ul {
+  #sndp ul,
+  #fstp ul {
     list-style: none;
     padding: 0;
     margin-bottom: 55px;
     margin-left: 60px;
   }
 
+  #fftp ul,
+  #sxhp ul,
+  #thrdp ul,
   #frtp ul {
     margin-bottom: 22.5px;
     margin-left: 30px;
   }
 
+  #fftp li,
+  #sxhp li,
+  #thrdp li,
   #frtp li,
-  #sndp li {
+  #sndp li,
+  #fstp li {
     display: inline-block;
     background: #98dede;
     font-family: "Poppins", sans-serif;
@@ -816,24 +834,22 @@ input {
     font-size: 20px;
   }
 
+  #fstp .primary-white,
   #sndp .primary-white {
     margin-left: 60px;
   }
 
+  #fftp .primary-white,
+  #sxhp .primary-white,
+  #thrdp .primary-white,
   #frtp .primary-white {
     margin-left: 30px;
   }
 
   #about-me {
-    min-height: 1000px;
+    min-height: 800px;
     display: flex;
     flex-direction: row-reverse;
-    background-image:
-      url(./assets/image-geometry_5.svg),
-      url(./assets/image-geometry_4.svg),
-      url(./assets/Rectangle\ 47.png);
-    background-position: left top, 63.5% top, 87% top;
-    background-repeat: no-repeat, no-repeat no-repeat;
     align-items: flex-end;
     margin-bottom: 150px;
   }
