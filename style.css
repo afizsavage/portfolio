@@ -6,22 +6,54 @@ body {
   overflow-y: scroll;
 }
 
+body.disScroll {
+  overflow-y: hidden;
+}
+
 header {
-  position: fixed;
   top: 0;
   display: flex;
   justify-content: end;
   height: 74px;
   background: #fff url(./assets/image_geometry_1.png) no-repeat;
-  padding: 0 19px;
-  width: 100%;
+  padding: 0;
   z-index: 50;
 }
 
+header.mobile {
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  background-image:
+    url(./assets/Group98.png),
+    url(./assets/Group\ 51.png),
+    url(./assets/Group\ 51.png),
+    url(./assets/Mask\ Group.png);
+  background-position: left top, 77% 12%, 23% 83%, center bottom;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+}
+
 header ul {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   list-style: none;
   padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+header li {
+  text-align: center;
+  height: 4rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+
+header > nav {
+  width: 100%;
 }
 
 header > nav a {
@@ -63,8 +95,13 @@ header > nav a:hover::after {
   width: 50%;
 }
 
-header ul > li {
-  display: inline;
+header > nav > div {
+  display: none;
+}
+
+header > nav > div.show {
+  display: flex;
+  height: 100%;
 }
 
 #menu-icon {
@@ -196,6 +233,10 @@ main > section p {
   font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
+}
+
+.menu-list li {
+  margin-top: 1rem;
 }
 
 .card ul {
@@ -512,6 +553,7 @@ input {
   header ul > li {
     font: normal 400 16px/24px "Poppins", sans-serif;
     margin: 0 15px;
+    display: inline;
   }
 
   header ul {
@@ -519,6 +561,7 @@ input {
   }
 
   header {
+    position: fixed;
     background: white;
     height: 100px;
     box-shadow: 0 0.5px 0 #dddfe6;
@@ -526,10 +569,21 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   header img {
     display: none;
+  }
+
+  header > nav {
+    width: auto;
+  }
+
+  header > nav > div {
+    display: block;
+    width: auto;
+    height: auto;
   }
 
   #timeline {
@@ -905,10 +959,6 @@ input {
   #contact label {
     cursor: pointer;
   }
-
-  /* #contact label:hover {
-    transform: translateX(20px);
-  } */
 
   #contact .input-container > label {
     display: inline-block;
