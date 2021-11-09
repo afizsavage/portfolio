@@ -643,7 +643,7 @@ input {
       url(./assets/image-geometry_3.svg),
       url(./assets/image-geometry_5.svg),
       url(./assets/image-geometry_4.svg);
-    background-position: calc(100% - 59.5%) calc(100% - 99.92%), calc(100% - 466px) 558px, right bottom, right bottom, right bottom;
+    background-position: calc(100% - 59.5%) calc(100% - 99.92%), 50% 558px, right 78.4%, left 90.13%, 40.8% 88.1%;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
     margin-top: 150px;
   }
@@ -692,7 +692,7 @@ input {
 
   #fstp {
     position: absolute;
-    bottom: 0;
+    top: 55.6%;
     left: 0;
     transition: all 0.5s ease-in 0.5s;
     cursor: pointer;
@@ -701,7 +701,7 @@ input {
   #thrdp {
     position: absolute;
     left: 0;
-    bottom: 465px;
+    top: 39%;
     transition: all 0.5s ease-in;
     cursor: pointer;
   }
@@ -726,15 +726,15 @@ input {
   #sxhp {
     position: absolute;
     right: 0;
-    bottom: 274px;
+    top: 49.2%;
     transition: all 0.5s ease-in;
     cursor: pointer;
   }
 
   #fftp {
     position: absolute;
-    right: 50%;
-    bottom: 50%;
+    left: 43.5%;
+    bottom: 0;
     transition: all 0.5s ease-in;
     cursor: pointer;
   }
