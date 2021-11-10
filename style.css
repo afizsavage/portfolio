@@ -324,6 +324,10 @@ main > section p {
   font-weight: 300;
 }
 
+#modal #desktop-shots {
+  display: none;
+}
+
 #modal div {
   height: 202.7px;
   width: 278.75px;
@@ -752,6 +756,77 @@ input {
     margin-left: 180px;
     display: flex;
     align-items: center;
+  }
+
+  #modal h3 {
+    font-size: 60px;
+    font-weight: 700;
+  }
+
+  #modal article {
+    align-items: flex-start;
+  }
+
+  #modal ul {
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  #modal article > ul li {
+    font-size: 20px;
+    line-height: 80%;
+  }
+
+  #modal #mobile-shots {
+    display: none;
+  }
+
+  #modal #desktop-shots {
+    display: block;
+  }
+
+  #modal div {
+    height: calc(688px + 171px);
+    width: 1181px;
+  }
+
+  #fst {
+    height: 688px;
+  }
+
+  #snd,
+  #trd,
+  #fth,
+  #fith {
+    bottom: 0;
+    height: 171px;
+  }
+
+  #trd {
+    left: 296px;
+  }
+
+  #fth {
+    left: calc(296px * 2);
+  }
+
+  #fith {
+    left: calc(296px * 3);
+  }
+
+  #modal p {
+    width: 700px;
+    margin-top: 3rem;
+  }
+
+  #modal footer {
+    width: 700px;
+    flex-direction: row;
+  }
+
+  #modal footer button:nth-of-type(2) {
+    margin-top: 0;
+    margin-left: 20px;
   }
 
   #projects {
