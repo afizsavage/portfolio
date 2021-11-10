@@ -305,12 +305,16 @@ main > section p {
   color: rgba(26, 34, 54, 1);
   margin-top: 0;
   margin-bottom: 24px;
+  align-self: start;
+  margin-left: 17px;
 }
 
 #modal ul {
   list-style: none;
   padding: 0;
   margin-bottom: 20px;
+  align-self: start;
+  margin-left: 2ch;
 }
 
 #modal article > ul li {
