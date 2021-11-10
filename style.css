@@ -344,6 +344,10 @@ main > section p {
   background: #fff;
 }
 
+#modal #navigate {
+  display: none;
+}
+
 #modal footer button {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -354,6 +358,11 @@ main > section p {
   padding-left: 70px;
   background: #fff url(./assets/ic_link.png) 90% center no-repeat;
   border: 1px solid #1a2236;
+}
+
+#modal footer div {
+  width: 246px;
+  height: auto;
 }
 
 #modal footer button:nth-of-type(2) {
@@ -821,12 +830,41 @@ input {
 
   #modal footer {
     width: 700px;
-    flex-direction: row;
+    flex-direction: column;
+  }
+
+  #modal footer div {
+    width: 700px;
+    height: auto;
   }
 
   #modal footer button:nth-of-type(2) {
     margin-top: 0;
     margin-left: 20px;
+  }
+
+  #modal #navigate {
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-between;
+  }
+
+  #modal #navigate button {
+    background: #fff url(./assets/ic_arrow_left.svg) left center no-repeat;
+    font-family: "Poppins", sans-serif;
+    color: #1a2236;
+    font-size: 18px;
+    font-weight: 300;
+    border: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 30px;
+    width: auto;
+  }
+
+  #modal #navigate button:nth-of-type(2) {
+    background: #fff url(./assets/ic_arrow_right_dark.svg) right center no-repeat;
+    padding-right: 30px;
   }
 
   #projects {
