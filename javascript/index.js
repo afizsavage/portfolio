@@ -75,13 +75,13 @@ heading.classList.add('headings');
 projectSection.id = 'projects';
 projectSection.appendChild(heading);
 
-function createDetailsPopup() {
+function createDetailsPopup(object) {
   body.classList.add('disScroll');
   const modal = createElementWithText('div');
   let closeButton;
   modal.id = 'modal';
   const modalContent = `  <article>
-  <h3>name goes here</h3>
+  <h3>${object.name}</h3>
   <img
     id="modal-icon"
     src="./assets/ic_cross.svg"
@@ -132,18 +132,7 @@ function createDetailsPopup() {
       </li>
     </ul>
   </div>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-    enim ad minim veniam, quis nostrud exercitation ullamco laboris
-    nisi
-    <br />
-    <br />
-    Ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-    labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi.
-  </p>
+  <p>${object.description}</p>
   <footer>
     <div>
       <button>See live</button>
@@ -164,10 +153,10 @@ function createDetailsPopup() {
   });
 }
 
-function addEvtListenerToButtons(buttons) {
+function addEvtListenerToButtons(buttons, projectObject) {
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
-      createDetailsPopup();
+      createDetailsPopup(projectObject);
     });
   });
 }
@@ -195,9 +184,9 @@ function createMobileCards() {
 </div>`;
     cardsParent.innerHTML = cardContent;
     projectSection.appendChild(cardsParent);
+    buttons = document.querySelectorAll('.card button');
+    addEvtListenerToButtons(buttons, project);
   });
-  buttons = document.querySelectorAll('.card button');
-  addEvtListenerToButtons(buttons);
 }
 
 function createDesktopCards() {
@@ -256,9 +245,9 @@ function createDesktopCards() {
   </div>`;
     cardsParent.innerHTML = cardContent;
     projectSection.appendChild(cardsParent);
+    cardsButton = document.querySelectorAll('.loss button');
+    addEvtListenerToButtons(cardsButton, projects[index]);
   }
-  cardsButton = document.querySelectorAll('.loss button');
-  addEvtListenerToButtons(cardsButton);
 }
 
 const load = () => {
