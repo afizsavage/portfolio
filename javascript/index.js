@@ -76,6 +76,7 @@ projectSection.id = 'projects';
 projectSection.appendChild(heading);
 
 function createDetailsPopup() {
+  body.classList.add('disScroll');
   const modal = createElementWithText('div');
   let closeButton;
   modal.id = 'modal';
@@ -158,6 +159,7 @@ function createDetailsPopup() {
   projectSection.appendChild(modal);
   closeButton = document.getElementById('modal-icon');
   closeButton.addEventListener('click', () => {
+    body.classList.remove('disScroll');
     modal.remove();
   });
 }
@@ -172,6 +174,7 @@ function addEvtListenerToButtons(buttons) {
 
 function createMobileCards() {
   let cardContent = '';
+  let buttons;
   const cardsParent = createElementWithText('div');
   projects.forEach((project) => {
     cardContent += `<div class="card">
@@ -193,6 +196,8 @@ function createMobileCards() {
     cardsParent.innerHTML = cardContent;
     projectSection.appendChild(cardsParent);
   });
+  buttons = document.querySelectorAll('.card button');
+  addEvtListenerToButtons(buttons);
 }
 
 function createDesktopCards() {

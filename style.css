@@ -277,8 +277,8 @@ main > section p {
   height: auto;
   overflow-y: scroll;
   position: fixed;
-  top: 2%;
-  bottom: 2%;
+  top: 0;
+  bottom: 0;
   width: 100%;
   background-color: #fff;
 }
@@ -765,6 +765,26 @@ input {
     align-items: center;
   }
 
+  #modal {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 4rem 4rem;
+    background: linear-gradient(
+      0deg,
+      rgba(26, 34, 54, 0.95),
+      rgba(26, 34, 54, 0.95)
+    );
+    backdrop-filter: blur(24px);
+    box-sizing: border-box;
+  }
+
+  #modal-icon {
+    right: 8rem;
+    top: 8rem;
+  }
+
   #modal h3 {
     font-size: 60px;
     font-weight: 700;
@@ -772,6 +792,10 @@ input {
 
   #modal article {
     align-items: flex-start;
+    background: #fff;
+    margin: 0;
+    box-sizing: border-box;
+    align-items: center;
   }
 
   #modal ul {
