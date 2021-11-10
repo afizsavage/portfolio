@@ -75,6 +75,101 @@ heading.classList.add('headings');
 projectSection.id = 'projects';
 projectSection.appendChild(heading);
 
+function createDetailsPopup() {
+  const modal = createElementWithText('div');
+  let closeButton;
+  modal.id = 'modal';
+  const modalContent = `  <article>
+  <h3>name goes here</h3>
+  <img
+    id="modal-icon"
+    src="./assets/ic_cross.svg"
+    alt="menu icon"
+    width="25"
+    height="19"
+  />
+  <ul>
+    <li>HTML/CSS</li>
+    <li>Ruby on Rails</li>
+    <li>Javascript</li>
+  </ul>
+  <div id="mobile-shots">
+    <ul>
+      <li id="first">
+        <img src="./assets/Rectangle34.png" alt="" />
+      </li>
+      <li id="second">
+        <img src="./assets/Rectangle41.png" alt="" />
+      </li>
+      <li id="third">
+        <img src="./assets/Rectangle41.png" alt="" />
+      </li>
+      <li id="fourth">
+        <img src="./assets/Rectangle41.png" alt="" />
+      </li>
+      <li id="fifth">
+        <img src="./assets/Rectangle41.png" alt="" />
+      </li>
+    </ul>
+  </div>
+  <div id="desktop-shots">
+    <ul>
+      <li id="fst">
+        <img src="./assets/Rectangle34(1).png" alt="" />
+      </li>
+      <li id="snd">
+        <img src="./assets/Rectangle41(1).png" alt="" />
+      </li>
+      <li id="trd">
+        <img src="./assets/Rectangle41(1).png" alt="" />
+      </li>
+      <li id="fth">
+        <img src="./assets/Rectangle41(1).png" alt="" />
+      </li>
+      <li id="fith">
+        <img src="./assets/Rectangle41(1).png" alt="" />
+      </li>
+    </ul>
+  </div>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+    enim ad minim veniam, quis nostrud exercitation ullamco laboris
+    nisi
+    <br />
+    <br />
+    Ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+    labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+    nostrud exercitation ullamco laboris nisi.
+  </p>
+  <footer>
+    <div>
+      <button>See live</button>
+      <button>See Source</button>
+    </div>
+    <div id="navigate">
+      <button>Previous project</button>
+      <button>Next project</button>
+    </div>
+  </footer>
+</article>`;
+  modal.innerHTML = modalContent;
+  projectSection.appendChild(modal);
+  closeButton = document.getElementById('modal-icon');
+  closeButton.addEventListener('click', () => {
+    modal.remove();
+  });
+}
+
+function addEvtListenerToButtons(buttons) {
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      createDetailsPopup();
+    });
+  });
+}
+
 function createMobileCards() {
   let cardContent = '';
   const cardsParent = createElementWithText('div');
@@ -103,6 +198,7 @@ function createMobileCards() {
 function createDesktopCards() {
   let cardContent = '';
   const cardsParent = createElementWithText('div');
+  let cardsButton;
 
   for (let index = 0; index < projects.length; index++) {
     let id;
@@ -156,6 +252,8 @@ function createDesktopCards() {
     cardsParent.innerHTML = cardContent;
     projectSection.appendChild(cardsParent);
   }
+  cardsButton = document.querySelectorAll('.loss button');
+  addEvtListenerToButtons(cardsButton);
 }
 
 const load = () => {

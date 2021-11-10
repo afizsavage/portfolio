@@ -43,7 +43,7 @@ header ul {
 header li {
   text-align: center;
   height: 4rem;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #000;
@@ -61,7 +61,7 @@ header > nav a {
 }
 
 header > nav a::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   height: 3px;
@@ -73,7 +73,7 @@ header > nav a::before {
 }
 
 header > nav a::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   height: 3px;
@@ -128,7 +128,7 @@ main {
 }
 
 .headings {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 50px;
   line-height: 100%;
   font-weight: 400;
@@ -139,7 +139,7 @@ main {
 }
 
 main > section p {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -150,7 +150,7 @@ main > section p {
 }
 
 .primary-dark {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #fff;
   display: block;
   height: 50px;
@@ -169,7 +169,7 @@ main > section p {
 }
 
 .card button {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   width: 178px;
   height: 44px;
   background: #1a2236 url(./assets/ic_arrow_right.svg) right center no-repeat;
@@ -203,7 +203,7 @@ main > section p {
 
 #projects,
 #about-me {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   height: 100%;
   display: grid;
   grid-template-columns: 320px;
@@ -227,7 +227,7 @@ main > section p {
 }
 
 .card {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -252,7 +252,7 @@ main > section p {
 .card ul > li {
   display: inline;
   background: #98dede;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-size: 10px;
   font-weight: 300;
@@ -272,7 +272,7 @@ main > section p {
 }
 
 #modal {
-  display: none;
+  display: block;
   z-index: 100;
   height: auto;
   overflow-y: scroll;
@@ -298,7 +298,7 @@ main > section p {
 }
 
 #modal h3 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: bolder;
   line-height: 16px;
@@ -347,7 +347,7 @@ main > section p {
 }
 
 #modal footer button {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 18px;
   height: 51px;
@@ -373,7 +373,7 @@ main > section p {
 }
 
 #modal p {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   line-height: 27px;
   width: 281px;
@@ -436,7 +436,7 @@ main > section p {
 }
 
 #about-me article {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   min-height: 289px;
   color: #fff;
   padding: 0 30px;
@@ -506,7 +506,7 @@ footer #footer-heading {
 }
 
 #contact p {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 14px;
   font-style: normal;
@@ -521,7 +521,7 @@ footer #footer-heading {
   flex-direction: column;
   border: none;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 #contact .input-container label {
@@ -543,7 +543,7 @@ input {
   border-radius: 4px;
   border: 1px solid #dfdfe0;
   height: 52px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -683,7 +683,7 @@ input {
 /* styling for desktop view */
 @media (min-width: 992px) {
   header ul > li {
-    font: normal 400 16px/24px "Poppins", sans-serif;
+    font: normal 400 16px/24px 'Poppins', sans-serif;
     margin: 0 15px;
     display: inline;
   }
@@ -745,7 +745,7 @@ input {
   }
 
   .headings {
-    font: normal normal 110px/110px "Playfair Display", serif;
+    font: normal normal 110px/110px 'Playfair Display', serif;
     color: #1a2236;
     margin: 0;
   }
@@ -849,7 +849,7 @@ input {
 
   #modal #navigate button {
     background: #fff url(./assets/ic_arrow_left.svg) left center no-repeat;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #1a2236;
     font-size: 18px;
     font-weight: 300;
@@ -901,7 +901,7 @@ input {
     width: 212px;
     height: 51px;
     padding: 0 15px;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -1010,7 +1010,7 @@ input {
   #frtp h3,
   #sndp h3,
   #fstp h3 {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
@@ -1059,7 +1059,7 @@ input {
   #fstp li {
     display: inline-block;
     background: #98dede;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 300;
     line-height: 80%;
