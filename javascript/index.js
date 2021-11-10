@@ -100,15 +100,70 @@ function createMobileCards() {
   });
 }
 
-// function createDesktopCards(params) {}
+function createDesktopCards() {
+  let cardContent = '';
+  const cardsParent = createElementWithText('div');
+
+  for (let index = 0; index < projects.length; index++) {
+    let id;
+    let image;
+
+    switch (index) {
+      case 1:
+        id = 'fstp';
+        image = './assets/Rectangle27.png';
+        break;
+      case 2:
+        id = 'sndp';
+        image = './assets/Rectangle21.png';
+        break;
+      case 3:
+        id = 'frtp';
+        image = './assets/Rectangle25.png';
+        break;
+      case 4:
+        id = 'sxhp';
+        image = './assets/Rectangle26.png';
+        break;
+      case 5:
+        id = 'fftp';
+        image = './assets/Rectangle47.png';
+        break;
+      default:
+        id = 'thrdp';
+        image = './assets/Rectangle46.png';
+    }
+
+    cardContent += `<div id=${id} class="loss" tabindex="0">
+    <figure>
+      <img
+        src=${image}
+        alt="project one screenshot"
+      />
+    </figure>
+    <section>
+      <h3>Project name goes</h3>
+      <ul>
+        <li>HTML/CSS</li>
+        <li>Ruby on Rails</li>
+        <li>+1</li>
+      </ul>
+      <button class="primary-white" type="button">
+        See this project
+      </button>
+    </section>
+  </div>`;
+    cardsParent.innerHTML = cardContent;
+    projectSection.appendChild(cardsParent);
+  }
+}
 
 const load = () => {
   main.insertBefore(projectSection, aboutSection);
   if (window.innerWidth < 992) {
     createMobileCards();
-    console.log('mobile');
   } else {
-    console.log('desktop');
+    createDesktopCards();
   }
 };
 
