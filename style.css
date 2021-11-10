@@ -24,8 +24,11 @@ header.mobile {
   height: 100vh;
   position: absolute;
   width: 100%;
-  background-image: url(./assets/Group98.png), url(./assets/Group\ 51.png),
-    url(./assets/Group\ 51.png), url(./assets/Mask\ Group.png);
+  background-image:
+    url(./assets/Group98.png),
+    url(./assets/Group\ 51.png),
+    url(./assets/Group\ 51.png),
+    url(./assets/Mask\ Group.png);
   background-position: left top, 77% 12%, 23% 83%, center bottom;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 }
@@ -313,6 +316,24 @@ main > section p {
   margin-bottom: 20px;
 }
 
+#modal div li {
+  position: absolute;
+}
+
+#about-me > article li {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: -0.0525em;
+}
+
+#social > ul > li {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
 #modal article > ul li {
   display: inline;
   border: 0.516669px solid #1a2236;
@@ -332,10 +353,28 @@ main > section p {
   position: relative;
 }
 
+#social ul {
+  list-style: none;
+  padding: 0;
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  height: 60px;
+  align-items: center;
+}
+
 #modal div ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+footer {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: #f9f9fa url(./assets/image_geometry_1.png) no-repeat;
 }
 
 #modal footer {
@@ -344,6 +383,15 @@ main > section p {
 
 #modal #navigate {
   display: none;
+}
+
+#about-me button {
+  background: #1a2236 url(./assets/ic_download.svg) right center no-repeat;
+  background-origin: content-box;
+  text-align: left;
+  padding: 0 30%;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
 #modal footer button {
@@ -363,13 +411,17 @@ main > section p {
   height: auto;
 }
 
+#about-me > button:hover {
+  background: #fff url(./assets/ic_download_dark.svg) right center no-repeat;
+  background-origin: content-box;
+  text-align: left;
+  padding: 0 30%;
+  margin-bottom: 40px;
+}
+
 #modal footer button:nth-of-type(2) {
   background: #fff url(./assets/ic_github_white.svg) 90% center no-repeat;
   margin-top: 30px;
-}
-
-#modal div li {
-  position: absolute;
 }
 
 #modal p {
@@ -406,33 +458,8 @@ main > section p {
   height: 41px;
 }
 
-#about-me > article li {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 27px;
-  letter-spacing: -0.0525em;
-}
-
 .card figure {
   margin: 0;
-}
-
-#about-me button {
-  background: #1a2236 url(./assets/ic_download.svg) right center no-repeat;
-  background-origin: content-box;
-  text-align: left;
-  padding: 0 30%;
-  margin-bottom: 40px;
-  width: 100%;
-}
-
-#about-me > button:hover {
-  background: #fff url(./assets/ic_download_dark.svg) right center no-repeat;
-  background-origin: content-box;
-  text-align: left;
-  padding: 0 30%;
-  margin-bottom: 40px;
 }
 
 #about-me article {
@@ -473,13 +500,6 @@ main > section p {
 
 #skills {
   background: #febf52 url(./assets/ic_skills.svg) right bottom no-repeat;
-}
-
-footer {
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  background: #f9f9fa url(./assets/image_geometry_1.png) no-repeat;
 }
 
 footer #footer-heading {
@@ -613,17 +633,6 @@ input {
   margin-top: 20px;
 }
 
-#social ul {
-  list-style: none;
-  padding: 0;
-  display: inline-flex;
-  justify-content: space-around;
-  width: 100%;
-  margin: 0;
-  height: 60px;
-  align-items: center;
-}
-
 #social {
   background: #1a2236;
   width: 100%;
@@ -656,12 +665,6 @@ input {
 
 #angelist {
   background: url(./assets/ic_angellist.svg) center center no-repeat;
-}
-
-#social > ul > li {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
 }
 
 #social ul a {
@@ -771,11 +774,12 @@ input {
     left: 0;
     right: 0;
     padding: 4rem 4rem;
-    background: linear-gradient(
-      0deg,
-      rgba(26, 34, 54, 0.95),
-      rgba(26, 34, 54, 0.95)
-    );
+    background:
+      linear-gradient(
+        0deg,
+        rgba(26, 34, 54, 0.95),
+        rgba(26, 34, 54, 0.95)
+      );
     backdrop-filter: blur(24px);
     box-sizing: border-box;
   }
@@ -788,12 +792,11 @@ input {
   #modal h3 {
     font-size: 60px;
     font-weight: 700;
-    align-self: start;
-    margin-left: 17px;
+    text-align: left;
+    width: 1181px;
   }
 
   #modal article {
-    align-items: flex-start;
     background: #fff;
     margin: 0;
     box-sizing: border-box;
@@ -803,8 +806,26 @@ input {
   #modal ul {
     margin-top: 2rem;
     margin-bottom: 2.5rem;
-    align-self: start;
-    margin-left: 2ch;
+    text-align: left;
+    width: 1181px;
+  }
+
+  #fftp li,
+  #sxhp li,
+  #thrdp li,
+  #frtp li,
+  #sndp li,
+  #fstp li {
+    display: inline-block;
+    background: #98dede;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 80%;
+    color: #1a2236;
+    padding: 12px 10px;
+    margin-right: 16px;
+    font-size: 20px;
   }
 
   #modal article > ul li {
@@ -854,6 +875,10 @@ input {
     margin-top: 3rem;
   }
 
+  footer {
+    background: #f9f9fa;
+  }
+
   #modal footer {
     width: 700px;
     flex-direction: column;
@@ -889,7 +914,8 @@ input {
   }
 
   #modal #navigate button:nth-of-type(2) {
-    background: #fff url(./assets/ic_arrow_right_dark.svg) right center
+    background:
+      #fff url(./assets/ic_arrow_right_dark.svg) right center
       no-repeat;
     padding-right: 30px;
   }
@@ -898,11 +924,18 @@ input {
     position: relative;
     height: 1700px;
     display: block;
-    background-image: url(./assets/image_dots.svg),
-      url(./assets/image-geometry_2.svg), url(./assets/image-geometry_3.svg),
-      url(./assets/image-geometry_5.svg), url(./assets/image-geometry_4.svg);
-    background-position: calc(100% - 59.5%) calc(100% - 99.92%), 50% 558px,
-      right 78.4%, left 90.13%, 40.8% 88.1%;
+    background-image:
+      url(./assets/image_dots.svg),
+      url(./assets/image-geometry_2.svg),
+      url(./assets/image-geometry_3.svg),
+      url(./assets/image-geometry_5.svg),
+      url(./assets/image-geometry_4.svg);
+    background-position:
+      calc(100% - 59.5%) calc(100% - 99.92%),
+      50% 558px,
+      right 78.4%,
+      left 90.13%,
+      40.8% 88.1%;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
     margin-top: 150px;
   }
@@ -1015,11 +1048,12 @@ input {
   #fstp section {
     position: absolute;
     bottom: 0;
-    background: linear-gradient(
-      0deg,
-      rgba(26, 34, 54, 0.95),
-      rgba(26, 34, 54, 0.95)
-    );
+    background:
+      linear-gradient(
+        0deg,
+        rgba(26, 34, 54, 0.95),
+        rgba(26, 34, 54, 0.95)
+      );
     backdrop-filter: blur(24px);
     width: 100%;
     height: 353px;
@@ -1079,24 +1113,6 @@ input {
     margin-left: 30px;
   }
 
-  #fftp li,
-  #sxhp li,
-  #thrdp li,
-  #frtp li,
-  #sndp li,
-  #fstp li {
-    display: inline-block;
-    background: #98dede;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 80%;
-    color: #1a2236;
-    padding: 12px 10px;
-    margin-right: 16px;
-    font-size: 20px;
-  }
-
   #fstp .primary-white,
   #sndp .primary-white {
     margin-left: 60px;
@@ -1119,7 +1135,8 @@ input {
 
   #article {
     display: block;
-    background: url(./assets/Group\ 51.svg) center bottom no-repeat,
+    background:
+      url(./assets/Group\ 51.svg) center bottom no-repeat,
       url(./assets/Shape.svg) right 30% no-repeat;
   }
 
@@ -1190,10 +1207,6 @@ input {
     margin: 0;
   }
 
-  footer {
-    background: #f9f9fa;
-  }
-
   #contact {
     min-height: 950px;
     display: flex;
@@ -1202,7 +1215,8 @@ input {
     align-items: center;
     overflow-x: hidden;
     padding: 0 19px;
-    background-image: url(./assets/image-geometry_6.svg),
+    background-image:
+      url(./assets/image-geometry_6.svg),
       url(./assets/image-geometry_7.png);
     background-position: left top, right bottom;
     background-repeat: no-repeat, no-repeat;

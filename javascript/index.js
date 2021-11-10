@@ -78,7 +78,6 @@ projectSection.appendChild(heading);
 function createDetailsPopup(object) {
   body.classList.add('disScroll');
   const modal = createElementWithText('div');
-  let closeButton;
   modal.id = 'modal';
   const modalContent = `  <article>
   <h3>${object.name}</h3>
@@ -146,7 +145,7 @@ function createDetailsPopup(object) {
 </article>`;
   modal.innerHTML = modalContent;
   projectSection.appendChild(modal);
-  closeButton = document.getElementById('modal-icon');
+  const closeButton = document.getElementById('modal-icon');
   closeButton.addEventListener('click', () => {
     body.classList.remove('disScroll');
     modal.remove();
@@ -194,7 +193,7 @@ function createDesktopCards() {
   const cardsParent = createElementWithText('div');
   let cardsButton;
 
-  for (let index = 0; index < projects.length; index++) {
+  for (let index = 0; index < projects.length; index += 1) {
     let id;
     let image;
 
