@@ -305,16 +305,12 @@ main > section p {
   color: rgba(26, 34, 54, 1);
   margin-top: 0;
   margin-bottom: 24px;
-  align-self: start;
-  margin-left: 17px;
 }
 
 #modal ul {
   list-style: none;
   padding: 0;
   margin-bottom: 20px;
-  align-self: start;
-  margin-left: 2ch;
 }
 
 #modal article > ul li {
@@ -792,6 +788,8 @@ input {
   #modal h3 {
     font-size: 60px;
     font-weight: 700;
+    align-self: start;
+    margin-left: 17px;
   }
 
   #modal article {
@@ -805,6 +803,8 @@ input {
   #modal ul {
     margin-top: 2rem;
     margin-bottom: 2.5rem;
+    align-self: start;
+    margin-left: 2ch;
   }
 
   #modal article > ul li {
