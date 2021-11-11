@@ -406,6 +406,14 @@ footer {
   border: 1px solid #1a2236;
 }
 
+.submit-container {
+  align-self: center;
+}
+
+#contact .submit-container > span {
+  color: #e2505c;
+}
+
 #modal footer div {
   width: 246px;
   height: auto;
