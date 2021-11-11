@@ -71,6 +71,8 @@ const projectSection = createElementWithText('section');
 const main = document.querySelector('main');
 const contactForm = document.forms[0];
 const emailField = contactForm.elements.email;
+const nameField = contactForm.elements.name;
+const messageField = contactForm.elements.message;
 
 const heading = createElementWithText('h2', 'Projects');
 heading.classList.add('headings');
@@ -290,37 +292,54 @@ menuButton.addEventListener('click', () => {
   checkIfMenuOpen(mobileMenu, menuButton);
 });
 
-// function showMessage(input, message, type) {
-//   // get the small element and set the message
-//   const msg = input.parentNode.querySelector('small');
-//   msg.innerText = message;
-//   // update the class for the input
-//   input.className = type ? 'success' : 'error';
-//   return type;
-// }
-
-function showError(input, message) {
-  // return showMessage(input, message, false);
+function showError(message) {
   const submitButton = document.getElementById('submit-btn');
   const errorElement = submitButton.parentNode.querySelector('span');
 
   errorElement.innerText = message;
 }
 
-function validateEmail(input, requiredMsg, invalidMsg) {
+function validatemessage() {
+  const message = messageField.value.trim();
+
+  if (message === '') {
+    return showError('Please enter your message');
+  }
+
+  return true;
+}
+
+function validateUserName() {
+  const name = nameField.value.trim();
+
+  if (name === '') {
+    return showError('Name is required');
+  }
+
+  return true;
+}
+
+function validateEmail() {
   const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  const email = input.value.trim();
+  const email = emailField.value.trim();
+  const validCheck = !emailRegex.test(email);
+  const lettersCheck = email.toLowerCase() !== email;
 
-  if (input.value.trim() === '') {
-    return showError(input, requiredMsg);
+  if (email === '') {
+    return showError('Email is required');
   }
 
-  if (!emailRegex.test(email)) {
-    return showError(input, invalidMsg);
+  if (!validCheck && !lettersCheck) {
+    contactForm.submit();
+    return showError('');
   }
 
-  if (email.toLowerCase() !== email) {
-    return showError(input, 'Email must be in lower case');
+  if (validCheck) {
+    return showError('Enter a valid email address');
+  }
+
+  if (lettersCheck) {
+    return showError('Email must be in lower case');
   }
 
   return true;
@@ -328,5 +347,11 @@ function validateEmail(input, requiredMsg, invalidMsg) {
 
 contactForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  validateEmail(emailField, 'Email is required', 'Enter a valid email address');
+  const emailValid = validateEmail();
+  const nameValid = validateUserName();
+  const messageValid = validatemessage();
+
+  if (nameValid && emailValid && messageValid) {
+    contactForm.submit();
+  }
 });
