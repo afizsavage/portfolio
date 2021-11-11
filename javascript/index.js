@@ -305,20 +305,24 @@ function showError(input, message) {
   const errorElement = submitButton.parentNode.querySelector('span');
 
   errorElement.innerText = message;
-  console.log(input, message, false);
 }
 
 function validateEmail(input, requiredMsg, invalidMsg) {
+  const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const email = input.value.trim();
+
   if (input.value.trim() === '') {
     return showError(input, requiredMsg);
   }
 
-  const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  const email = input.value.trim();
   if (!emailRegex.test(email)) {
     return showError(input, invalidMsg);
-    console.log(input, invalidMsg);
   }
+
+  if (email.toLowerCase() !== email) {
+    return showError(input, 'Email must be in lower case');
+  }
+
   return true;
 }
 

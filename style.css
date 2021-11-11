@@ -1305,6 +1305,7 @@ input {
 
   #contact .submit-container > span {
     height: 1.5rem;
+    color: #e2505c;
   }
 
   #email-container {
