@@ -69,6 +69,8 @@ const body = document.querySelector('body');
 const aboutSection = document.getElementById('about-me');
 const projectSection = createElementWithText('section');
 const main = document.querySelector('main');
+const contactForm = document.forms[0];
+const emailField = contactForm.elements.email;
 
 const heading = createElementWithText('h2', 'Projects');
 heading.classList.add('headings');
@@ -286,4 +288,41 @@ addEvtListenerToNavlinks();
 menuButton.addEventListener('click', () => {
   mobileMenu.classList.toggle('show');
   checkIfMenuOpen(mobileMenu, menuButton);
+});
+
+// function showMessage(input, message, type) {
+//   // get the small element and set the message
+//   const msg = input.parentNode.querySelector('small');
+//   msg.innerText = message;
+//   // update the class for the input
+//   input.className = type ? 'success' : 'error';
+//   return type;
+// }
+
+function showError(input, message) {
+  // return showMessage(input, message, false);
+  const submitButton = document.getElementById('submit-btn');
+  const errorElement = submitButton.parentNode.querySelector('span');
+
+  errorElement.innerText = message;
+  console.log(input, message, false);
+}
+
+function validateEmail(input, requiredMsg, invalidMsg) {
+  if (input.value.trim() === '') {
+    return showError(input, requiredMsg);
+  }
+
+  const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const email = input.value.trim();
+  if (!emailRegex.test(email)) {
+    return showError(input, invalidMsg);
+    console.log(input, invalidMsg);
+  }
+  return true;
+}
+
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  validateEmail(emailField, 'Email is required', 'Enter a valid email address');
 });

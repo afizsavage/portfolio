@@ -630,7 +630,7 @@ input {
 
 #submit-btn {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 #social {
@@ -1298,8 +1298,13 @@ input {
   #contact .submit-container {
     grid-column: 1 / span 3;
     display: flex;
-    justify-content: center;
-    margin-top: 30px;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  #contact .submit-container > span {
+    height: 1.5rem;
   }
 
   #email-container {
