@@ -121,7 +121,11 @@
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-          <form action="https://formspree.io/f/mayazvjy" method="post">
+          <form
+            action="https://formspree.io/f/mayazvjy"
+            method="post"
+            novalidate
+          >
             <fieldset>
               <div class="input-container">
                 <input
@@ -129,10 +133,8 @@
                   type="text"
                   name="name"
                   placeholder="Your name"
-                  maxlength="30"
-                  required
                 />
-                <label for="name">Your Email</label>
+                <label for="name">Your Name</label>
               </div>
               <div id="email-container" class="input-container">
                 <input
@@ -140,7 +142,6 @@
                   type="email"
                   name="email"
                   placeholder="Your email"
-                  required
                 />
                 <label for="email">Your email</label>
               </div>
@@ -153,6 +154,7 @@
                 required
               ></textarea>
               <div class="submit-container">
+                <span></span>
                 <button id="submit-btn" class="primary-dark" type="submit">
                   Start Collaboration
                 </button>

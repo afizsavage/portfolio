@@ -406,6 +406,14 @@ footer {
   border: 1px solid #1a2236;
 }
 
+.submit-container {
+  align-self: center;
+}
+
+#contact .submit-container > span {
+  color: #e2505c;
+}
+
 #modal footer div {
   width: 246px;
   height: auto;
@@ -630,7 +638,7 @@ input {
 
 #submit-btn {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 #social {
@@ -1298,8 +1306,14 @@ input {
   #contact .submit-container {
     grid-column: 1 / span 3;
     display: flex;
-    justify-content: center;
-    margin-top: 30px;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  #contact .submit-container > span {
+    height: 1.5rem;
+    color: #e2505c;
   }
 
   #email-container {

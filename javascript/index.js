@@ -69,6 +69,10 @@ const body = document.querySelector('body');
 const aboutSection = document.getElementById('about-me');
 const projectSection = createElementWithText('section');
 const main = document.querySelector('main');
+const contactForm = document.forms[0];
+const emailField = contactForm.elements.email;
+const nameField = contactForm.elements.name;
+const messageField = contactForm.elements.message;
 
 const heading = createElementWithText('h2', 'Projects');
 heading.classList.add('headings');
@@ -286,4 +290,68 @@ addEvtListenerToNavlinks();
 menuButton.addEventListener('click', () => {
   mobileMenu.classList.toggle('show');
   checkIfMenuOpen(mobileMenu, menuButton);
+});
+
+function showError(message) {
+  const submitButton = document.getElementById('submit-btn');
+  const errorElement = submitButton.parentNode.querySelector('span');
+
+  errorElement.innerText = message;
+}
+
+function validatemessage() {
+  const message = messageField.value.trim();
+
+  if (message === '') {
+    return showError('Please enter your message');
+  }
+
+  return true;
+}
+
+function validateUserName() {
+  const name = nameField.value.trim();
+
+  if (name === '') {
+    return showError('Name is required');
+  }
+
+  return true;
+}
+
+function validateEmail() {
+  const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const email = emailField.value.trim();
+  const validCheck = !emailRegex.test(email);
+  const lettersCheck = email.toLowerCase() !== email;
+
+  if (email === '') {
+    return showError('Email is required');
+  }
+
+  if (!validCheck && !lettersCheck) {
+    contactForm.submit();
+    return showError('');
+  }
+
+  if (validCheck) {
+    return showError('Enter a valid email address');
+  }
+
+  if (lettersCheck) {
+    return showError('Email must be in lower case');
+  }
+
+  return true;
+}
+
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const emailValid = validateEmail();
+  const nameValid = validateUserName();
+  const messageValid = validatemessage();
+
+  if (nameValid && emailValid && messageValid) {
+    contactForm.submit();
+  }
 });
