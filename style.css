@@ -878,6 +878,10 @@ input {
     left: calc(296px * 3);
   }
 
+  .loss section {
+    display: none;
+  }
+
   #modal p {
     width: 700px;
     margin-top: 3rem;
