@@ -156,6 +156,14 @@ function createDetailsPopup(object) {
   });
 }
 
+const addEvtListenerToCards = (cards) => {
+  cards.forEach((card) => {
+    card.addEventListener('mouseover', () => {
+      console.log('hover');
+    });
+  });
+};
+
 function addEvtListenerToButtons(buttons, projectObject) {
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -165,9 +173,9 @@ function addEvtListenerToButtons(buttons, projectObject) {
 }
 
 function createMobileCards() {
+  const cardsParent = createElementWithText('div');
   let cardContent = '';
   let buttons;
-  const cardsParent = createElementWithText('div');
   projects.forEach((project) => {
     cardContent += `<div class="card">
 <figure>
@@ -195,6 +203,7 @@ function createMobileCards() {
 function createDesktopCards() {
   let cardContent = '';
   const cardsParent = createElementWithText('div');
+  let cards;
   let cardsButton;
 
   for (let index = 0; index < projects.length; index += 1) {
@@ -248,7 +257,10 @@ function createDesktopCards() {
   </div>`;
     cardsParent.innerHTML = cardContent;
     projectSection.appendChild(cardsParent);
+    cards = document.querySelectorAll('.loss');
     cardsButton = document.querySelectorAll('.loss button');
+    addEvtListenerToCards(cards);
+
     addEvtListenerToButtons(cardsButton, projects[index]);
   }
 }
@@ -320,7 +332,8 @@ function validateUserName() {
 }
 
 function validateEmail() {
-  const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const emailRegex =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const email = emailField.value.trim();
   const validCheck = !emailRegex.test(email);
   const lettersCheck = email.toLowerCase() !== email;
