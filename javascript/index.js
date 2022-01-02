@@ -156,11 +156,17 @@ function createDetailsPopup(object) {
   });
 }
 
-const addEvtListenerToCards = (cards) => {
+const addEvtListenerToCards = (cards, event = 'mouseover') => {
   cards.forEach((card) => {
-    card.addEventListener('mouseover', () => {
-      console.log('hover');
-    });
+    if (event === 'mouseover') {
+      card.addEventListener(event, () => {
+        card.childNodes[3].classList.add('show');
+      });
+    } else {
+      card.addEventListener(event, () => {
+        card.childNodes[3].classList.remove('show');
+      });
+    }
   });
 };
 
@@ -260,6 +266,7 @@ function createDesktopCards() {
     cards = document.querySelectorAll('.loss');
     cardsButton = document.querySelectorAll('.loss button');
     addEvtListenerToCards(cards);
+    addEvtListenerToCards(cards, 'mouseout');
 
     addEvtListenerToButtons(cardsButton, projects[index]);
   }

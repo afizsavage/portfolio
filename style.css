@@ -1046,7 +1046,7 @@ input {
   #frtp section,
   #sndp section,
   #fstp section {
-    display: inline-block;
+    display: none;
     position: absolute;
     bottom: 0;
     background: linear-gradient(
@@ -1340,5 +1340,9 @@ input {
     border: none;
     color: #fff;
     background-image: url(./assets/ic_download.svg);
+  }
+
+  .show {
+    display: inline-block !important;
   }
 }
