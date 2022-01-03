@@ -156,6 +156,20 @@ function createDetailsPopup(object) {
   });
 }
 
+const addEvtListenerToCards = (cards, event = 'mouseover') => {
+  cards.forEach((card) => {
+    if (event === 'mouseover') {
+      card.addEventListener(event, () => {
+        card.childNodes[3].classList.remove('hide');
+      });
+    } else {
+      card.addEventListener(event, () => {
+        card.childNodes[3].classList.add('hide');
+      });
+    }
+  });
+};
+
 function addEvtListenerToButtons(buttons, projectObject) {
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -165,9 +179,9 @@ function addEvtListenerToButtons(buttons, projectObject) {
 }
 
 function createMobileCards() {
+  const cardsParent = createElementWithText('div');
   let cardContent = '';
   let buttons;
-  const cardsParent = createElementWithText('div');
   projects.forEach((project) => {
     cardContent += `<div class="card">
 <figure>
@@ -195,6 +209,7 @@ function createMobileCards() {
 function createDesktopCards() {
   let cardContent = '';
   const cardsParent = createElementWithText('div');
+  let cards;
   let cardsButton;
 
   for (let index = 0; index < projects.length; index += 1) {
@@ -234,7 +249,7 @@ function createDesktopCards() {
         alt="project one screenshot"
       />
     </figure>
-    <section>
+    <section class="hide">
       <h3>Project name goes</h3>
       <ul>
         <li>HTML/CSS</li>
@@ -248,7 +263,10 @@ function createDesktopCards() {
   </div>`;
     cardsParent.innerHTML = cardContent;
     projectSection.appendChild(cardsParent);
+    cards = document.querySelectorAll('.loss');
     cardsButton = document.querySelectorAll('.loss button');
+    addEvtListenerToCards(cards);
+    addEvtListenerToCards(cards, 'mouseout');
     addEvtListenerToButtons(cardsButton, projects[index]);
   }
 }

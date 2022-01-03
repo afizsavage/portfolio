@@ -922,9 +922,7 @@ input {
   }
 
   #modal #navigate button:nth-of-type(2) {
-    background:
-      #fff url(./assets/ic_arrow_right_dark.svg) right center
-      no-repeat;
+    background: #fff url(./assets/ic_arrow_right_dark.svg) right center no-repeat;
     padding-right: 30px;
   }
 
@@ -1054,6 +1052,7 @@ input {
   #frtp section,
   #sndp section,
   #fstp section {
+    transition: all 0.5s ease-out;
     position: absolute;
     bottom: 0;
     background:
@@ -1350,5 +1349,13 @@ input {
     border: none;
     color: #fff;
     background-image: url(./assets/ic_download.svg);
+  }
+
+  .show {
+    display: inline-block;
+  }
+
+  .hide {
+    display: none;
   }
 }
