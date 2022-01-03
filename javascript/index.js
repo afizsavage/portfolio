@@ -160,11 +160,11 @@ const addEvtListenerToCards = (cards, event = 'mouseover') => {
   cards.forEach((card) => {
     if (event === 'mouseover') {
       card.addEventListener(event, () => {
-        card.childNodes[3].classList.add('show');
+        card.childNodes[3].classList.remove('hide');
       });
     } else {
       card.addEventListener(event, () => {
-        card.childNodes[3].classList.remove('show');
+        card.childNodes[3].classList.add('hide');
       });
     }
   });
@@ -249,7 +249,7 @@ function createDesktopCards() {
         alt="project one screenshot"
       />
     </figure>
-    <section>
+    <section class="hide">
       <h3>Project name goes</h3>
       <ul>
         <li>HTML/CSS</li>
@@ -267,7 +267,6 @@ function createDesktopCards() {
     cardsButton = document.querySelectorAll('.loss button');
     addEvtListenerToCards(cards);
     addEvtListenerToCards(cards, 'mouseout');
-
     addEvtListenerToButtons(cardsButton, projects[index]);
   }
 }
